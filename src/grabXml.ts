@@ -1,11 +1,4 @@
-import {
-  XmlNodeType,
-  XmlNode,
-  XmlElementNode,
-  XmlTextNode,
-  XmlCommentNode,
-  XmlInstructionNode,
-} from "../types/XmlNode";
+import { XmlNodeType, XmlNode } from "../types/XmlNode";
 
 enum ParseLocation {
   /** Nothing interesting has been encountered yet */
@@ -38,10 +31,8 @@ enum ParseLocation {
   INSIDE_CDATA,
   /** Inside a DOCTYPE node */
   INSIDE_DOCTYPE,
-  /** Inside DOCTYPE entities */
-  INSIDE_DOCTYPE_ENTITIES,
   /** Inside an instruction node, such as <?xml ... ?> */
-  INSIDE_INSTRUCTION_NODE,
+  INSIDE_INSTRUCTION,
 }
 
 interface ParseState {
@@ -51,10 +42,6 @@ interface ParseState {
   start: number;
   /** The node we are currently parsing */
   node: XmlNode;
-  /** The name of the attribute we are currently parsing, if applicable */
-  attribute: string;
-  /** The type of quote that started the attribute value we are currently parsing, if applicable */
-  quote: string;
 }
 
 // Character codes that we will need to check
@@ -80,21 +67,24 @@ const closeSquareCode = "]".charCodeAt(0);
  * @returns A root element node with the XML's elements as children
  */
 export default function grabXml(content: string) {
-  const root: XmlElementNode = {
+  const root: XmlNode = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
     parent: null,
+    tag: "#root",
+    attributes: {},
     children: [],
+    text: "",
   };
 
   const state: ParseState = {
     location: ParseLocation.NONE,
     start: 0,
     node: root,
-    attribute: "",
-    quote: "",
   };
+
+  let attribute = "";
+  let quote = "";
+  let insideEntities = false;
 
   for (let i = 0; i < content.length; i++) {
     switch (state.location) {
@@ -102,60 +92,19 @@ export default function grabXml(content: string) {
         // Check for opening brackets to start a comment or element, or chars to start a text element
         switch (content.charCodeAt(i)) {
           case openBracketCode: {
-            if (content.charCodeAt(i + 1) === exclamationCode) {
-              if (
-                content.charCodeAt(i + 2) === dashCode &&
-                content.charCodeAt(i + 3) === dashCode
-              ) {
-                const child: XmlCommentNode = {
-                  type: XmlNodeType.COMMENT,
-                  parent: state.node,
-                  text: "",
-                };
-                (state.node as XmlElementNode).children.push(child);
-                updateState(state, ParseLocation.INSIDE_COMMENT, i + 4, child);
-                i += 3;
-              } else if (
-                content.charCodeAt(i + 2) === openSquareCode &&
-                content.charCodeAt(i + 8) === openSquareCode &&
-                content.substring(i + 3, i + 8).toLowerCase() === "cdata"
-              ) {
-                const child: XmlTextNode = {
-                  type: XmlNodeType.TEXT,
-                  parent: state.node,
-                  text: "",
-                };
-                (state.node as XmlElementNode).children.push(child);
-                updateState(state, ParseLocation.INSIDE_CDATA, i + 9, child);
-                i += 8;
-              } else {
-                const child: XmlInstructionNode = {
-                  type: XmlNodeType.INSTRUCTION,
-                  parent: state.node,
-                  // HACK: Just being lazy
-                  tagName: content.substring(i + 1, content.indexOf(" ", i + 1)),
-                  text: "",
-                };
-                (state.node as XmlElementNode).children.push(child);
-                updateState(
-                  state,
-                  ParseLocation.INSIDE_DOCTYPE,
-                  i + 1 + child.tagName.length,
-                  child
-                );
-              }
-            } else {
-              updateState(state, ParseLocation.ELEMENT_OPENED, i);
-            }
+            updateState(state, ParseLocation.ELEMENT_OPENED, i);
             break;
           }
           default: {
-            const child: XmlTextNode = {
+            const child: XmlNode = {
               type: XmlNodeType.TEXT,
               parent: state.node,
+              tag: "",
+              attributes: {},
+              children: [],
               text: "",
             };
-            (state.node as XmlElementNode).children.push(child);
+            state.node.children.push(child);
             updateState(state, ParseLocation.INSIDE_TEXT, i, child);
             break;
           }
@@ -163,7 +112,8 @@ export default function grabXml(content: string) {
         break;
       }
       case ParseLocation.ELEMENT_OPENED: {
-        // Check for a slash to indicate a closing element, or chars to start the element's name
+        // Check for a slash to indicate a closing element, an exclamation mark to indicate a
+        // comment or doctype, or chars to start the element's name
         switch (content.charCodeAt(i)) {
           case slashCode: {
             updateState(state, ParseLocation.ELEMENT_CLOSING, i);
@@ -176,15 +126,50 @@ export default function grabXml(content: string) {
             // Ignore spaces
             break;
           }
+          case exclamationCode: {
+            if (content.charCodeAt(i + 1) === dashCode && content.charCodeAt(i + 2) === dashCode) {
+              const child: XmlNode = {
+                type: XmlNodeType.COMMENT,
+                parent: state.node,
+                tag: "",
+                attributes: {},
+                children: [],
+                text: "",
+              };
+              state.node.children.push(child);
+              updateState(state, ParseLocation.INSIDE_COMMENT, i + 3, child);
+              i += 2;
+              break;
+            } else if (
+              content.charCodeAt(i + 1) === openSquareCode &&
+              content.charCodeAt(i + 7) === openSquareCode &&
+              content.substring(i + 2, i + 7).toLowerCase() === "cdata"
+            ) {
+              const child: XmlNode = {
+                type: XmlNodeType.TEXT,
+                parent: state.node,
+                tag: "",
+                attributes: {},
+                children: [],
+                text: "",
+              };
+              state.node.children.push(child);
+              updateState(state, ParseLocation.INSIDE_CDATA, i + 8, child);
+              i += 7;
+              break;
+            }
+            // Fallthrough to default processing to include the exclamation mark in the tag
+          }
           default: {
-            const child: XmlElementNode = {
+            const child: XmlNode = {
               type: XmlNodeType.ELEMENT,
               parent: state.node,
-              tagName: "",
+              tag: "",
               attributes: {},
               children: [],
+              text: "",
             };
-            (state.node as XmlElementNode).children.push(child);
+            state.node.children.push(child);
             updateState(state, ParseLocation.ELEMENT_OPEN_NAME, i, child);
             break;
           }
@@ -222,7 +207,7 @@ export default function grabXml(content: string) {
         // Check for a closing bracket to move onto the next thing, or spaces to start gathering attributes
         switch (content.charCodeAt(i)) {
           case closeBracketCode: {
-            (state.node as XmlElementNode).tagName = content.substring(state.start, i);
+            state.node.tag = content.substring(state.start, i);
             updateState(state, ParseLocation.NONE, i);
             break;
           }
@@ -230,12 +215,22 @@ export default function grabXml(content: string) {
           case tabCode:
           case carriageReturnCode:
           case newLineCode: {
-            (state.node as XmlElementNode).tagName = content.substring(state.start, i);
-            if ((state.node as XmlElementNode).tagName.charCodeAt(0) === questionCode) {
-              state.node.type = XmlNodeType.INSTRUCTION;
-              updateState(state, ParseLocation.INSIDE_INSTRUCTION_NODE, i);
-            } else {
-              updateState(state, ParseLocation.INSIDE_ELEMENT, i);
+            state.node.tag = content.substring(state.start, i);
+            switch (state.node.tag.charCodeAt(0)) {
+              case exclamationCode: {
+                state.node.type = XmlNodeType.INSTRUCTION;
+                updateState(state, ParseLocation.INSIDE_DOCTYPE, i);
+                break;
+              }
+              case questionCode: {
+                state.node.type = XmlNodeType.INSTRUCTION;
+                updateState(state, ParseLocation.INSIDE_INSTRUCTION, i);
+                break;
+              }
+              default: {
+                updateState(state, ParseLocation.INSIDE_ELEMENT, i);
+                break;
+              }
             }
             break;
           }
@@ -262,7 +257,7 @@ export default function grabXml(content: string) {
           }
           case closeBracketCode: {
             // TODO: Handle other types of automatically self-closing nodes, like <link> in HTML
-            if ((state.node as XmlElementNode).tagName.startsWith("?")) {
+            if (state.node.tag.startsWith("?")) {
               state.node = state.node.parent;
             }
             updateState(state, ParseLocation.NONE, i);
@@ -292,17 +287,17 @@ export default function grabXml(content: string) {
         // or spaces to ignore if it turns out the attribute has no value after a bit more processing
         switch (content.charCodeAt(i)) {
           case equalsCode: {
-            state.attribute = content.substring(state.start, i);
+            attribute = content.substring(state.start, i);
             updateState(state, ParseLocation.BEFORE_ATTRIBUTE_VALUE, i);
             break;
           }
           case closeBracketCode: {
-            (state.node as XmlElementNode).attributes[content.substring(state.start, i)] = "";
+            state.node.attributes[content.substring(state.start, i)] = "";
             updateState(state, ParseLocation.NONE, i);
             break;
           }
           case slashCode: {
-            (state.node as XmlElementNode).attributes[content.substring(state.start, i)] = "";
+            state.node.attributes[content.substring(state.start, i)] = "";
             updateState(state, ParseLocation.ELEMENT_CLOSING, i);
             break;
           }
@@ -310,7 +305,7 @@ export default function grabXml(content: string) {
           case tabCode:
           case carriageReturnCode:
           case newLineCode: {
-            state.attribute = content.substring(state.start, i);
+            attribute = content.substring(state.start, i);
             updateState(state, ParseLocation.AFTER_ATTRIBUTE_NAME, i);
             break;
           }
@@ -326,12 +321,12 @@ export default function grabXml(content: string) {
             break;
           }
           case slashCode: {
-            (state.node as XmlElementNode).attributes[state.attribute] = "";
+            state.node.attributes[attribute] = "";
             updateState(state, ParseLocation.ELEMENT_SELF_CLOSING, i);
             break;
           }
           default: {
-            (state.node as XmlElementNode).attributes[state.attribute] = "";
+            state.node.attributes[attribute] = "";
             updateState(state, ParseLocation.ATTRIBUTE_NAME, i);
             break;
           }
@@ -343,7 +338,7 @@ export default function grabXml(content: string) {
         switch (content.charCodeAt(i)) {
           case singleQuoteCode:
           case doubleQuoteCode: {
-            state.quote = content[i];
+            quote = content[i];
             updateState(state, ParseLocation.ATTRIBUTE_VALUE, i + 1);
             break;
           }
@@ -355,7 +350,7 @@ export default function grabXml(content: string) {
             break;
           }
           default: {
-            state.quote = "";
+            quote = "";
             updateState(state, ParseLocation.ATTRIBUTE_VALUE, i);
             break;
           }
@@ -367,11 +362,8 @@ export default function grabXml(content: string) {
         switch (content.charCodeAt(i)) {
           case singleQuoteCode:
           case doubleQuoteCode: {
-            if (state.quote === content[i]) {
-              (state.node as XmlElementNode).attributes[state.attribute] = content.substring(
-                state.start,
-                i
-              );
+            if (quote === content[i]) {
+              state.node.attributes[attribute] = content.substring(state.start, i);
               updateState(state, ParseLocation.INSIDE_ELEMENT, i);
             }
             break;
@@ -380,11 +372,8 @@ export default function grabXml(content: string) {
           case tabCode:
           case carriageReturnCode:
           case newLineCode: {
-            if (!state.quote) {
-              (state.node as XmlElementNode).attributes[state.attribute] = content.substring(
-                state.start,
-                i
-              );
+            if (!quote) {
+              state.node.attributes[attribute] = content.substring(state.start, i);
               updateState(state, ParseLocation.INSIDE_ELEMENT, i);
             }
             break;
@@ -396,52 +385,8 @@ export default function grabXml(content: string) {
         // Check for an open bracket to start a comment or an element
         switch (content.charCodeAt(i)) {
           case openBracketCode: {
-            (state.node as XmlTextNode).text = content.substring(state.start, i);
-            if (content.charCodeAt(i + 1) === exclamationCode) {
-              if (
-                content.charCodeAt(i + 2) === dashCode &&
-                content.charCodeAt(i + 3) === dashCode
-              ) {
-                const child: XmlCommentNode = {
-                  type: XmlNodeType.COMMENT,
-                  parent: state.node.parent,
-                  text: "",
-                };
-                (state.node.parent as XmlElementNode).children.push(child);
-                updateState(state, ParseLocation.INSIDE_COMMENT, i + 4, child);
-                i += 3;
-              } else if (
-                content.charCodeAt(i + 2) === openSquareCode &&
-                content.charCodeAt(i + 8) === openSquareCode &&
-                content.substring(i + 3, i + 8).toLowerCase() === "cdata"
-              ) {
-                const child: XmlTextNode = {
-                  type: XmlNodeType.TEXT,
-                  parent: state.node.parent,
-                  text: "",
-                };
-                (state.node.parent as XmlElementNode).children.push(child);
-                updateState(state, ParseLocation.INSIDE_CDATA, i + 9, child);
-                i += 8;
-              } else {
-                const child: XmlInstructionNode = {
-                  type: XmlNodeType.INSTRUCTION,
-                  parent: state.node.parent,
-                  // HACK: Just being lazy
-                  tagName: content.substring(i + 1, content.indexOf(" ", i + 1)),
-                  text: "",
-                };
-                (state.node.parent as XmlElementNode).children.push(child);
-                updateState(
-                  state,
-                  ParseLocation.INSIDE_DOCTYPE,
-                  i + 1 + child.tagName.length,
-                  child
-                );
-              }
-            } else {
-              updateState(state, ParseLocation.ELEMENT_OPENED, i, state.node.parent);
-            }
+            state.node.text = content.substring(state.start, i);
+            updateState(state, ParseLocation.ELEMENT_OPENED, i, state.node.parent);
             break;
           }
         }
@@ -455,7 +400,7 @@ export default function grabXml(content: string) {
           content.charCodeAt(i + 2) === closeBracketCode
         ) {
           // Just trim comments, I don't think the surrounding whitespace is ever going to be interesting
-          (state.node as XmlCommentNode).text = content.substring(state.start, i).trim();
+          state.node.text = content.substring(state.start, i).trim();
           updateState(state, ParseLocation.NONE, i + 3, state.node.parent);
           i += 2;
         }
@@ -469,7 +414,7 @@ export default function grabXml(content: string) {
           content.charCodeAt(i + 2) === closeBracketCode
         ) {
           // Just trim CDATA
-          (state.node as XmlTextNode).text = content.substring(state.start, i).trim();
+          state.node.text = content.substring(state.start, i).trim();
           updateState(state, ParseLocation.NONE, i + 3, state.node.parent);
           i += 2;
         }
@@ -479,36 +424,32 @@ export default function grabXml(content: string) {
         // Check for the entities start char, or DOCTYPE end chars to close the text and move on
         switch (content.charCodeAt(i)) {
           case openSquareCode: {
-            state.location = ParseLocation.INSIDE_DOCTYPE_ENTITIES;
+            insideEntities = true;
+            break;
+          }
+          case closeSquareCode: {
+            insideEntities = false;
             break;
           }
           case closeBracketCode: {
-            // Just trim DOCTYPE
-            (state.node as XmlInstructionNode).text = content.substring(state.start, i).trim();
-            updateState(state, ParseLocation.NONE, i, state.node.parent);
+            if (!insideEntities) {
+              // Just trim DOCTYPE
+              state.node.text = content.substring(state.start, i).trim();
+              updateState(state, ParseLocation.NONE, i, state.node.parent);
+            }
             break;
           }
         }
         break;
       }
-      case ParseLocation.INSIDE_DOCTYPE_ENTITIES: {
-        // Check for the entities end char to move on
-        switch (content.charCodeAt(i)) {
-          case closeSquareCode: {
-            state.location = ParseLocation.INSIDE_DOCTYPE;
-            break;
-          }
-        }
-        break;
-      }
-      case ParseLocation.INSIDE_INSTRUCTION_NODE: {
+      case ParseLocation.INSIDE_INSTRUCTION: {
         // Check for the comment end chars to close the comment and move on
         if (
           content.charCodeAt(i) === questionCode &&
           content.charCodeAt(i + 1) === closeBracketCode
         ) {
           // Just trim instructions
-          (state.node as XmlInstructionNode).text = content.substring(state.start, i).trim();
+          state.node.text = content.substring(state.start, i).trim();
           updateState(state, ParseLocation.NONE, i + 2, state.node.parent);
           i += 1;
         }

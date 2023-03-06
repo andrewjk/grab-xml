@@ -1,7 +1,7 @@
 import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
-import { XmlElementNode, XmlNodeType } from "../../types/XmlNode";
+import { XmlNode, XmlNodeType } from "../../types/XmlNode";
 import sanitizeNode from "../sanitizeNode";
 
 //const xml = `
@@ -42,22 +42,17 @@ test("XML with prolog instruction", () => {
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
+    tag: "#root",
     children: [
       {
         type: XmlNodeType.INSTRUCTION,
-        tagName: "?xml",
+        tag: "?xml",
         text: 'version="1.0" encoding="utf-8"',
-        children: [],
-        attributes: {},
       },
       {
         type: XmlNodeType.INSTRUCTION,
-        tagName: "?php",
+        tag: "?php",
         text: "do some php stuff",
-        children: [],
-        attributes: {},
       },
     ],
   };

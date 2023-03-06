@@ -18,17 +18,16 @@ test("XML with doctypes", () => {
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
+    tag: "#root",
     children: [
       {
         type: XmlNodeType.INSTRUCTION,
-        tagName: "!DOCTYPE",
+        tag: "!DOCTYPE",
         text: 'html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"',
       },
       {
         type: XmlNodeType.INSTRUCTION,
-        tagName: "!DOCTYPE",
+        tag: "!DOCTYPE",
         text: `sgml [
   <!ELEMENT sgml ANY>
   <!ENTITY % std "standard SGML">

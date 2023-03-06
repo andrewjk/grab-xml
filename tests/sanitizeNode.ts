@@ -1,36 +1,36 @@
-import {
-  XmlElementNode,
-  XmlNode,
-  XmlNodeType,
-  XmlTextNode,
-} from "../types/XmlNode";
+import { XmlNode, XmlNodeType } from "../types/XmlNode";
 
 export default function sanitizeNode(node: XmlNode) {
   // Delete parents (to remove circular references)
   delete node.parent;
 
-  if (node.type === XmlNodeType.ELEMENT) {
-    const el = node as XmlElementNode;
+  // Remove empty tags
+  if (!node.tag) {
+    delete node.tag;
+  }
 
-    // Convert attributes to objects so they get properly inspected
-    // TODO: Just use an object
-    //el.attributes = Object.fromEntries(el.attributes);
+  // Trim whitespace from text nodes and remove empty text nodes
+  node.text = node.text.trim();
+  if (!node.text) {
+    delete node.text;
+  }
 
-    // Trim whitespace from text nodes
-    el.children.forEach((c) => {
-      if (c.type === XmlNodeType.TEXT) {
-        const tx = c as XmlTextNode;
-        tx.text = tx.text.trim();
-      }
-    });
+  // Remove empty attributes
+  if (!Object.keys(node.attributes).length) {
+    delete node.attributes;
+  }
 
+  // Remove empty children
+  if (!node.children.length) {
+    delete node.children;
+  }
+
+  if (node.children) {
     // Remove empty text nodes
-    el.children = el.children.filter(
-      (c) => c.type !== XmlNodeType.TEXT || !!(c as XmlTextNode).text
-    );
+    node.children = node.children.filter((c) => c.type !== XmlNodeType.TEXT || !!c.text.trim());
 
-    // Sanitize the child
-    for (let child of el.children) {
+    // Sanitize the children
+    for (let child of node.children) {
       sanitizeNode(child);
     }
   }

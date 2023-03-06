@@ -12,17 +12,15 @@ test("XML with bare attributes", () => {
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
+    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,
-        tagName: "xml",
+        tag: "xml",
         attributes: {
           attribute: "value",
           attribute2: "value2",
         },
-        children: [],
       },
     ],
   };

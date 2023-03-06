@@ -17,25 +17,19 @@ test("XML with self-closing elements", () => {
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
+    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,
-        tagName: "xml",
-        attributes: {},
+        tag: "xml",
         children: [
           {
             type: XmlNodeType.ELEMENT,
-            tagName: "element",
-            attributes: {},
-            children: [],
+            tag: "element",
           },
           {
             type: XmlNodeType.ELEMENT,
-            tagName: "element",
-            attributes: {},
-            children: [],
+            tag: "element",
           },
         ],
       },

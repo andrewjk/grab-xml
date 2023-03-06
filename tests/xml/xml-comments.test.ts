@@ -8,6 +8,8 @@ test("XML with comment", () => {
   const xml = `
 <xml>
   <!-- I'm a comment -->
+  <!--I'm a comment without spaces-->
+  <!--Really_no_spaces-->
 </xml>
 `;
 
@@ -16,17 +18,23 @@ test("XML with comment", () => {
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
+    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,
-        tagName: "xml",
-        attributes: {},
+        tag: "xml",
         children: [
           {
             type: XmlNodeType.COMMENT,
             text: "I'm a comment",
+          },
+          {
+            type: XmlNodeType.COMMENT,
+            text: "I'm a comment without spaces",
+          },
+          {
+            type: XmlNodeType.COMMENT,
+            text: "Really_no_spaces",
           },
         ],
       },

@@ -18,36 +18,32 @@ test("XML with attributes without a value", () => {
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
+    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,
-        tagName: "xml",
+        tag: "xml",
         attributes: { attribute: "" },
         children: [
           {
             type: XmlNodeType.ELEMENT,
-            tagName: "element",
+            tag: "element",
             attributes: { attribute2: "" },
-            children: [],
           },
           {
             type: XmlNodeType.ELEMENT,
-            tagName: "element",
+            tag: "element",
             attributes: {
               attribute3: "",
               attribute4: "value",
             },
-            children: [],
           },
           {
             type: XmlNodeType.ELEMENT,
-            tagName: "element",
+            tag: "element",
             attributes: {
               attribute5: "",
             },
-            children: [],
           },
         ],
       },

@@ -17,31 +17,28 @@ test("XML with single-quoted attributes", () => {
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
+    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,
-        tagName: "xml",
+        tag: "xml",
         attributes: {
           attribute: "value",
         },
         children: [
           {
             type: XmlNodeType.ELEMENT,
-            tagName: "element",
+            tag: "element",
             attributes: {
               attribute2: "value 2",
             },
-            children: [],
           },
           {
             type: XmlNodeType.ELEMENT,
-            tagName: "element",
+            tag: "element",
             attributes: {
               attribute3: "value 3",
             },
-            children: [],
           },
         ],
       },

@@ -8,6 +8,7 @@ test("XML with character data (CDATA)", () => {
   const xml = `
 <xml>
   <![CDATA[I'm <em>character</em> data]]>
+  <![CDATA[I_have_no_spaces]]>
 </xml>
 `;
 
@@ -16,17 +17,19 @@ test("XML with character data (CDATA)", () => {
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tagName: "#root",
-    attributes: {},
+    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,
-        tagName: "xml",
-        attributes: {},
+        tag: "xml",
         children: [
           {
             type: XmlNodeType.TEXT,
             text: "I'm <em>character</em> data",
+          },
+          {
+            type: XmlNodeType.TEXT,
+            text: "I_have_no_spaces",
           },
         ],
       },
