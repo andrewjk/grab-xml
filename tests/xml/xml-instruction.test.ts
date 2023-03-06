@@ -1,7 +1,7 @@
 import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
-import { XmlNode, XmlNodeType } from "../../types/XmlNode";
+import XmlNodeType from "../../types/XmlNodeType";
 import sanitizeNode from "../sanitizeNode";
 
 //const xml = `

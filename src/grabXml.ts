@@ -1,4 +1,5 @@
-import { XmlNodeType, XmlNode } from "../types/XmlNode";
+import XmlNode from "../types/XmlNode";
+import XmlNodeType from "../types/XmlNodeType";
 
 enum ParseLocation {
   /** Nothing interesting has been encountered yet */
@@ -45,8 +46,8 @@ interface ParseState {
 }
 
 // Character codes that we will need to check
-const openBracketCode = "<".charCodeAt(0);
-const closeBracketCode = ">".charCodeAt(0);
+const openTriangleCode = "<".charCodeAt(0);
+const closeTriangleCode = ">".charCodeAt(0);
 const slashCode = "/".charCodeAt(0);
 const equalsCode = "=".charCodeAt(0);
 const singleQuoteCode = "'".charCodeAt(0);
@@ -86,14 +87,14 @@ export default function grabXml(content: string) {
   let attribute = "";
   let quote = "";
   let textNeedsDecoding = false;
-  let inDocEntities = false;
+  let inDocTypeEntities = false;
 
   for (let i = 0; i < content.length; i++) {
     switch (state.location) {
       case ParseLocation.NONE: {
         // Check for opening brackets to start a comment or element, or chars to start a text element
         switch (content.charCodeAt(i)) {
-          case openBracketCode: {
+          case openTriangleCode: {
             updateState(state, ParseLocation.ELEMENT_OPENED, i);
             break;
           }
@@ -199,7 +200,7 @@ export default function grabXml(content: string) {
       case ParseLocation.ELEMENT_SELF_CLOSING: {
         // Check for a closing bracket to move onto the next thing
         switch (content.charCodeAt(i)) {
-          case closeBracketCode: {
+          case closeTriangleCode: {
             updateState(state, ParseLocation.NONE, i, state.node.parent);
             break;
           }
@@ -209,7 +210,7 @@ export default function grabXml(content: string) {
       case ParseLocation.ELEMENT_OPEN_NAME: {
         // Check for a closing bracket to move onto the next thing, or spaces to start gathering attributes
         switch (content.charCodeAt(i)) {
-          case closeBracketCode: {
+          case closeTriangleCode: {
             state.node.tag = content.substring(state.start, i);
             updateState(state, ParseLocation.NONE, i);
             break;
@@ -243,7 +244,7 @@ export default function grabXml(content: string) {
       case ParseLocation.ELEMENT_CLOSE_NAME: {
         // Check for a closing bracket to move onto the next thing
         switch (content.charCodeAt(i)) {
-          case closeBracketCode: {
+          case closeTriangleCode: {
             // TODO: Check that the tagname matches
             updateState(state, ParseLocation.NONE, i, state.node.parent);
             break;
@@ -258,7 +259,7 @@ export default function grabXml(content: string) {
             updateState(state, ParseLocation.ELEMENT_SELF_CLOSING, i);
             break;
           }
-          case closeBracketCode: {
+          case closeTriangleCode: {
             // TODO: Handle other types of automatically self-closing nodes, like <link> in HTML
             if (state.node.tag.startsWith("?")) {
               state.node = state.node.parent;
@@ -294,7 +295,7 @@ export default function grabXml(content: string) {
             updateState(state, ParseLocation.BEFORE_ATTRIBUTE_VALUE, i);
             break;
           }
-          case closeBracketCode: {
+          case closeTriangleCode: {
             state.node.attributes[content.substring(state.start, i)] = "";
             updateState(state, ParseLocation.NONE, i);
             break;
@@ -388,7 +389,7 @@ export default function grabXml(content: string) {
         // Check for an open bracket to start a comment or an element, or an ampersand to indicate
         // that the text may need to be decoded
         switch (content.charCodeAt(i)) {
-          case openBracketCode: {
+          case openTriangleCode: {
             state.node.text = content.substring(state.start, i);
             if (textNeedsDecoding) {
               state.node.text = state.node.text
@@ -413,7 +414,7 @@ export default function grabXml(content: string) {
         if (
           content.charCodeAt(i) === dashCode &&
           content.charCodeAt(i + 1) === dashCode &&
-          content.charCodeAt(i + 2) === closeBracketCode
+          content.charCodeAt(i + 2) === closeTriangleCode
         ) {
           // Just trim comments, I don't think the surrounding whitespace is ever going to be interesting
           state.node.text = content.substring(state.start, i).trim();
@@ -427,9 +428,8 @@ export default function grabXml(content: string) {
         if (
           content.charCodeAt(i) === closeSquareCode &&
           content.charCodeAt(i + 1) === closeSquareCode &&
-          content.charCodeAt(i + 2) === closeBracketCode
+          content.charCodeAt(i + 2) === closeTriangleCode
         ) {
-          // Just trim CDATA
           state.node.text = content.substring(state.start, i).trim();
           updateState(state, ParseLocation.NONE, i + 3, state.node.parent);
           i += 2;
@@ -437,19 +437,19 @@ export default function grabXml(content: string) {
         break;
       }
       case ParseLocation.INSIDE_DOCTYPE: {
-        // Check for the entities start char, or DOCTYPE end chars to close the text and move on
+        // Check for the DOCTYPE end chars to close the text and move on, or the entities
+        // chars ([ and ]) to prevent closing
         switch (content.charCodeAt(i)) {
           case openSquareCode: {
-            inDocEntities = true;
+            inDocTypeEntities = true;
             break;
           }
           case closeSquareCode: {
-            inDocEntities = false;
+            inDocTypeEntities = false;
             break;
           }
-          case closeBracketCode: {
-            if (!inDocEntities) {
-              // Just trim DOCTYPE
+          case closeTriangleCode: {
+            if (!inDocTypeEntities) {
               state.node.text = content.substring(state.start, i).trim();
               updateState(state, ParseLocation.NONE, i, state.node.parent);
             }
@@ -462,9 +462,8 @@ export default function grabXml(content: string) {
         // Check for the comment end chars to close the comment and move on
         if (
           content.charCodeAt(i) === questionCode &&
-          content.charCodeAt(i + 1) === closeBracketCode
+          content.charCodeAt(i + 1) === closeTriangleCode
         ) {
-          // Just trim instructions
           state.node.text = content.substring(state.start, i).trim();
           updateState(state, ParseLocation.NONE, i + 2, state.node.parent);
           i += 1;
