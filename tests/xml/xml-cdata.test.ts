@@ -4,11 +4,10 @@ import grabXml from "../../src/grabXml";
 import { XmlNodeType } from "../../types/XmlNode";
 import sanitizeNode from "../sanitizeNode";
 
-test("XML with single-quoted attributes", () => {
+test("XML with character data (CDATA)", () => {
   const xml = `
-<xml attribute='value'>
-  <element attribute2='value 2' />
-  <element attribute3='value 3'/>
+<xml>
+  <![CDATA[I'm <em>character</em> data]]>
 </xml>
 `;
 
@@ -23,25 +22,11 @@ test("XML with single-quoted attributes", () => {
       {
         type: XmlNodeType.ELEMENT,
         tagName: "xml",
-        attributes: {
-          attribute: "value",
-        },
+        attributes: {},
         children: [
           {
-            type: XmlNodeType.ELEMENT,
-            tagName: "element",
-            attributes: {
-              attribute2: "value 2",
-            },
-            children: [],
-          },
-          {
-            type: XmlNodeType.ELEMENT,
-            tagName: "element",
-            attributes: {
-              attribute3: "value 3",
-            },
-            children: [],
+            type: XmlNodeType.TEXT,
+            text: "I'm <em>character</em> data",
           },
         ],
       },
@@ -49,6 +34,11 @@ test("XML with single-quoted attributes", () => {
   };
 
   assert.equal(doc, expected);
+
+  // Also try it without spaces between elements
+  const doc2 = grabXml(xml.replace(/\>\s+\</g, "><"));
+  sanitizeNode(doc2);
+  assert.equal(doc2, expected);
 });
 
 test.run();

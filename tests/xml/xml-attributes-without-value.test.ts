@@ -9,6 +9,7 @@ test("XML with attributes without a value", () => {
 <xml attribute>
   <element attribute2 />
   <element attribute3 attribute4="value" />
+  <element attribute5/>
 </xml>
 `;
 
@@ -37,6 +38,14 @@ test("XML with attributes without a value", () => {
             attributes: {
               attribute3: "",
               attribute4: "value",
+            },
+            children: [],
+          },
+          {
+            type: XmlNodeType.ELEMENT,
+            tagName: "element",
+            attributes: {
+              attribute5: "",
             },
             children: [],
           },

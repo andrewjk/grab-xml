@@ -2,16 +2,13 @@ export enum XmlNodeType {
   ELEMENT = 0,
   TEXT = 1,
   COMMENT = 2,
+  INSTRUCTION = 3,
 }
 
 export interface XmlNode {
   type: XmlNodeType;
   parent: XmlNode;
 }
-
-//export interface XmlRootNode extends XmlNode {
-//  children: XmlNode[];
-//}
 
 export interface XmlElementNode extends XmlNode {
   tagName: string;
@@ -24,5 +21,10 @@ export interface XmlTextNode extends XmlNode {
 }
 
 export interface XmlCommentNode extends XmlNode {
-  comment: string;
+  text: string;
+}
+
+export interface XmlInstructionNode extends XmlNode {
+  tagName: string;
+  text: string;
 }

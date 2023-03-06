@@ -5,7 +5,12 @@ import { XmlNodeType } from "../../types/XmlNode";
 import sanitizeNode from "../sanitizeNode";
 
 test("XML with double-quoted attributes", () => {
-  const xml = `<xml attribute="value" attribute2="value 2" />`;
+  const xml = `
+<xml attribute="value">
+  <element attribute2="value 2" />
+  <element attribute3="value 3"/>
+</xml>
+`;
 
   const doc = grabXml(xml);
   sanitizeNode(doc);
@@ -20,9 +25,25 @@ test("XML with double-quoted attributes", () => {
         tagName: "xml",
         attributes: {
           attribute: "value",
-          attribute2: "value 2",
         },
-        children: [],
+        children: [
+          {
+            type: XmlNodeType.ELEMENT,
+            tagName: "element",
+            attributes: {
+              attribute2: "value 2",
+            },
+            children: [],
+          },
+          {
+            type: XmlNodeType.ELEMENT,
+            tagName: "element",
+            attributes: {
+              attribute3: "value 3",
+            },
+            children: [],
+          },
+        ],
       },
     ],
   };

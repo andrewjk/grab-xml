@@ -1,7 +1,7 @@
 import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
-import { XmlNodeType } from "../../types/XmlNode";
+import { XmlElementNode, XmlNodeType } from "../../types/XmlNode";
 import sanitizeNode from "../sanitizeNode";
 
 //const xml = `
@@ -31,8 +31,11 @@ import sanitizeNode from "../sanitizeNode";
 //</bookstore>
 //`;
 
-test("XML tag", () => {
-  const xml = `<?xml version="1.0" encoding="utf-8"?>`;
+test("XML with prolog instruction", () => {
+  const xml = `
+  <?xml version="1.0" encoding="utf-8"?>
+  <?php do some php stuff?>
+`;
 
   const doc = grabXml(xml);
   sanitizeNode(doc);
@@ -43,13 +46,18 @@ test("XML tag", () => {
     attributes: {},
     children: [
       {
-        type: XmlNodeType.ELEMENT,
-        tagName: "xml",
-        attributes: {
-          version: "1.0",
-          encoding: "utf-8",
-        },
+        type: XmlNodeType.INSTRUCTION,
+        tagName: "?xml",
+        text: 'version="1.0" encoding="utf-8"',
         children: [],
+        attributes: {},
+      },
+      {
+        type: XmlNodeType.INSTRUCTION,
+        tagName: "?php",
+        text: "do some php stuff",
+        children: [],
+        attributes: {},
       },
     ],
   };
