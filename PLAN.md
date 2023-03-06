@@ -9,7 +9,7 @@ Without values ✓
 Comments ✓
 CDATA ✓
 DOCTYPE ✓
-Replace predefined entities &lt; &gt; &amp; &apos; &quot;
+Replace predefined entities ✓
 Options
 Trim whitespace
 Self-closing HTML elements

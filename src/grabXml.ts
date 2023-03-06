@@ -55,6 +55,7 @@ const spaceCode = " ".charCodeAt(0);
 const tabCode = "\t".charCodeAt(0);
 const carriageReturnCode = "\r".charCodeAt(0);
 const newLineCode = "\n".charCodeAt(0);
+const ampersandCode = "&".charCodeAt(0);
 const questionCode = "?".charCodeAt(0);
 const exclamationCode = "!".charCodeAt(0);
 const dashCode = "-".charCodeAt(0);
@@ -84,7 +85,8 @@ export default function grabXml(content: string) {
 
   let attribute = "";
   let quote = "";
-  let insideEntities = false;
+  let textNeedsDecoding = false;
+  let inDocEntities = false;
 
   for (let i = 0; i < content.length; i++) {
     switch (state.location) {
@@ -106,6 +108,7 @@ export default function grabXml(content: string) {
             };
             state.node.children.push(child);
             updateState(state, ParseLocation.INSIDE_TEXT, i, child);
+            textNeedsDecoding = false;
             break;
           }
         }
@@ -382,11 +385,24 @@ export default function grabXml(content: string) {
         break;
       }
       case ParseLocation.INSIDE_TEXT: {
-        // Check for an open bracket to start a comment or an element
+        // Check for an open bracket to start a comment or an element, or an ampersand to indicate
+        // that the text may need to be decoded
         switch (content.charCodeAt(i)) {
           case openBracketCode: {
             state.node.text = content.substring(state.start, i);
+            if (textNeedsDecoding) {
+              state.node.text = state.node.text
+                .replaceAll("&lt;", "<")
+                .replaceAll("&gt;", ">")
+                .replaceAll("&amp;", "&")
+                .replaceAll("&apos;", "'")
+                .replaceAll("&quot;", '"');
+            }
             updateState(state, ParseLocation.ELEMENT_OPENED, i, state.node.parent);
+            break;
+          }
+          case ampersandCode: {
+            textNeedsDecoding = true;
             break;
           }
         }
@@ -424,15 +440,15 @@ export default function grabXml(content: string) {
         // Check for the entities start char, or DOCTYPE end chars to close the text and move on
         switch (content.charCodeAt(i)) {
           case openSquareCode: {
-            insideEntities = true;
+            inDocEntities = true;
             break;
           }
           case closeSquareCode: {
-            insideEntities = false;
+            inDocEntities = false;
             break;
           }
           case closeBracketCode: {
-            if (!insideEntities) {
+            if (!inDocEntities) {
               // Just trim DOCTYPE
               state.node.text = content.substring(state.start, i).trim();
               updateState(state, ParseLocation.NONE, i, state.node.parent);
