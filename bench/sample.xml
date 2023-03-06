@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:nyt="http://www.nytimes.com/namespaces/rss/2.0" version="2.0">
+  <channel>
+    <title>NYT &gt; Top Stories</title>
+    <link>https://www.nytimes.com</link>
+    <atom:link href="https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml" rel="self" type="application/rss+xml"></atom:link>
+    <description></description>
+    <language>en-us</language>
+    <copyright>Copyright 2023 The New York Times Company</copyright>
+    <lastBuildDate>Mon, 06 Mar 2023 01:11:40 +0000</lastBuildDate>
+    <pubDate>Mon, 06 Mar 2023 00:31:11 +0000</pubDate>
+    <image>
+      <title>NYT &gt; Top Stories</title>
+      <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
+      <link>https://www.nytimes.com</link>
+    </image>
+    <item>
+      <title>What Trench Warfare on Ukraine’s Front Line Looks Like</title>
+      <link>https://www.nytimes.com/2023/03/05/world/europe/trench-warfare-ukraine-frontline.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/world/europe/trench-warfare-ukraine-frontline.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/world/europe/trench-warfare-ukraine-frontline.html" rel="standout"></atom:link>
+      <description>The Ukrainian military calls it the zero position, where Russian soldiers are close enough to see, and where an old war tactic takes a horrific toll.</description>
+      <dc:creator>Tyler Hicks and Marc Santora</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 22:10:27 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Russian Invasion of Ukraine (2022)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Marinka (Ukraine)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Bombs and Explosives</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/multimedia/05Ukraine-Trench-Photos-1A/00Ukraine-Trench-Photos-04-vthg-moth.jpg" width="151"></media:content>
+      <media:description>Boghdan, a Ukrainian soldier, firing a rocket-propelled grenade toward Russian forces from a trench in an area of Marinka, in eastern Ukraine.</media:description>
+    </item>
+    <item>
+      <title>Ukraine Holds Off Russian Forces in Bakhmut As Fighting Intensifies</title>
+      <link>https://www.nytimes.com/2023/03/05/world/europe/ukraine-russia-war-bakhmut.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/world/europe/ukraine-russia-war-bakhmut.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/world/europe/ukraine-russia-war-bakhmut.html" rel="standout"></atom:link>
+      <description>Russian troops and Wagner mercenaries are still waging a fierce battle to encircle the eastern Ukrainian city, officials said.</description>
+      <dc:creator>Matthew Mpoke Bigg, Vivek Shankar and Andrew E. Kramer</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 23:50:33 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Ukraine</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Russia</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Russian Invasion of Ukraine (2022)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Bakhmut (Ukraine)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Defense and Military Forces</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Europe</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/multimedia/05ukraine-briefing-bakhmut-qfkw/05ukraine-briefing-bakhmut-qfkw-moth-v2.jpg" width="151"></media:content>
+      <media:credit>Daniel Berehulak/The New York Times</media:credit>
+      <media:description>Ukrainian soldiers manning an artillery position near Bakhmut, Ukraine, on Thursday.</media:description>
+    </item>
+    <item>
+      <title>In Florida Legislative Session, a Chance for DeSantis to Check Off His Wish List</title>
+      <link>https://www.nytimes.com/2023/03/05/us/ron-desantis-florida-legislature.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/us/ron-desantis-florida-legislature.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/us/ron-desantis-florida-legislature.html" rel="standout"></atom:link>
+      <description>Republican lawmakers have indicated the session will be guided by Gov. Ron DeSantis’s priorities, including a proposal that would expand gun rights.</description>
+      <dc:creator>Patricia Mazzei</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 13:50:37 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">State Legislatures</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">DeSantis, Ron</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Republican Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Florida</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/02/multimedia/00nat-florida-legislature-01-mqvf/00nat-florida-legislature-01-mqvf-moth-v2.jpg" width="151"></media:content>
+      <media:credit>Scott McIntyre for The New York Times</media:credit>
+      <media:description>Gov. Ron DeSantis’s policy wishes will likely soon be granted by the Florida Legislature, giving him a broader platform from which to launch a widely expected 2024 presidential campaign.</media:description>
+    </item>
+    <item>
+      <title>House Committee Budgets Swell as G.O.P. Plans Road Shows Across U.S.</title>
+      <link>https://www.nytimes.com/2023/03/05/us/politics/house-republicans-budget-travel-campaign.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/us/politics/house-republicans-budget-travel-campaign.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/us/politics/house-republicans-budget-travel-campaign.html" rel="standout"></atom:link>
+      <description>Republican leaders have told their colleagues to get out of Washington for field hearings that allow the party to take their message straight to voters, a costly pursuit that can be a boon to big donors.</description>
+      <dc:creator>Annie Karni and Catie Edmondson</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 22:12:26 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Federal Budget (US)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Law and Legislation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Lobbying and Lobbyists</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2024</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Nadler, Jerrold</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Jordan, Jim (1964- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Business Travel</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">House of Representatives</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Republican Party</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/03/multimedia/00dc-cong-travel-01-mjgf/00dc-cong-travel-01-mjgf-moth.jpg" width="151"></media:content>
+      <media:credit>Kenny Holston/The New York Times</media:credit>
+      <media:description>House Republicans are determined to take their message directly to voters at a time when they are hard-pressed to get anything concrete done on Capitol Hill.</media:description>
+    </item>
+    <item>
+      <title>How A.I. Is Being Used to Detect Cancer That Doctors Miss</title>
+      <link>https://www.nytimes.com/2023/03/05/technology/artificial-intelligence-breast-cancer-detection.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/technology/artificial-intelligence-breast-cancer-detection.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/technology/artificial-intelligence-breast-cancer-detection.html" rel="standout"></atom:link>
+      <description>Hungary has become a major testing ground for A.I. software to spot cancer, as doctors debate whether the technology will replace them in medical jobs.</description>
+      <dc:creator>Adam Satariano, Cade Metz and Akos Stiller For The New York Times</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 14:47:57 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Artificial Intelligence</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Breast Cancer</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Computers and the Internet</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mammography</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Doctors</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hospitals</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Hungary</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Kheiron Medical Technologies Ltd</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/03/multimedia/00ai-breastcancer-01-pbvk/00ai-breastcancer-01-pbvk-moth-v2.jpg" width="151"></media:content>
+      <media:credit>Akos Stiller for The New York Times</media:credit>
+      <media:description>A patient getting a mammogram at Bács-Kiskun County Hospital in Kecskemét, Hungary. The hospital has been testing A.I. software for breast cancer detection.</media:description>
+    </item>
+    <item>
+      <title>Biden, in Selma, Says Voting Rights Are Still ‘Under Assault’</title>
+      <link>https://www.nytimes.com/2023/03/05/us/politics/biden-voting-rights-selma.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/us/politics/biden-voting-rights-selma.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/us/politics/biden-voting-rights-selma.html" rel="standout"></atom:link>
+      <description>The president’s commemoration of Bloody Sunday comes as he is expected to announce a re-election bid, which will require the support of Black voters who were decisive in helping him win the first time.</description>
+      <dc:creator>Katie Rogers</dc:creator>
+      <pubDate>Mon, 06 Mar 2023 00:31:11 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Voting Rights, Registration and Requirements</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States Politics and Government</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Voting Rights Act (1965)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Black People</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Civil Rights and Liberties</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Civil Rights Movement (1954-68)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Demonstrations, Protests and Riots</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Biden, Joseph R Jr</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Selma (Ala)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Sharpton, Al</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/multimedia/05dc-biden-selma-mkcg/05dc-biden-selma-mkcg-moth.jpg" width="151"></media:content>
+      <media:credit>Doug Mills/The New York Times</media:credit>
+      <media:description>President Biden has pushed for two pieces of voting rights legislation while in office, but neither has passed.</media:description>
+    </item>
+    <item>
+      <title>Vanquishing the Dutch, Jordan Stolz Creates a New Norse Myth</title>
+      <link>https://www.nytimes.com/2023/03/05/sports/olympics/jordan-stolz-speedskating-world-championships.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/sports/olympics/jordan-stolz-speedskating-world-championships.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/sports/olympics/jordan-stolz-speedskating-world-championships.html" rel="standout"></atom:link>
+      <description>Stolz, the 18-year-old from Wisconsin, won three gold medals at the speedskating world championships, finishing his turns in a way that seemed like something out of a storybook.</description>
+      <dc:creator>Kevin Draper</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 15:12:05 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Speedskating</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Records and Achievements</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Stolz, Jordan (2004- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Nuis, Kjeld (1989- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Netherlands</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/multimedia/05speed-skating1-zfqb/05speed-skating1-zfqb-moth.jpg" width="151"></media:content>
+      <media:credit>Peter Dejong/Associated Press</media:credit>
+      <media:description>Jordan Stolz of Wisconsin on Sunday celebrated his win in the 1,500-meter race at speedskating’s world championships in the Netherlands. His best finish at the Beijing Olympics, just over a year ago, was 13th.</media:description>
+    </item>
+    <item>
+      <title>The $2 Billion Question of Who You Are at Work</title>
+      <link>https://www.nytimes.com/2023/03/05/business/remote-work-personality-tests.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/business/remote-work-personality-tests.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/business/remote-work-personality-tests.html" rel="standout"></atom:link>
+      <description>Employers are finding personality tests — measuring how employees think and feel — more useful than ever while navigating hybrid work. But the tests are not always up-to-date.</description>
+      <dc:creator>Emma Goldberg</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 18:26:54 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Workplace Environment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Tests and Examinations</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Psychology and Psychologists</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Labor and Jobs</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hiring and Promotion</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Human Resources</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/business/05personality-testing-cover-illo/05personality-testing-cover-illo-moth.jpg" width="151"></media:content>
+      <media:credit>Julian Glander</media:credit>
+    </item>
+    <item>
+      <title>Are You a Cubicle Cat or a Couch Koala? Test Your Office Personality.</title>
+      <link>https://www.nytimes.com/2023/03/05/business/office-work-personality.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/business/office-work-personality.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/business/office-work-personality.html" rel="standout"></atom:link>
+      <description>Personality assessment has ballooned into a giant industry that aims to explain your working style. Take our quiz to find out what kind of office creature you are.</description>
+      <dc:creator>Emma Goldberg and Aaron Krolik</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 16:57:43 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Workplace Environment</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Content Type: Quiz</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Psychology and Psychologists</category>
+    </item>
+    <item>
+      <title>This Ohio Island Has a Problem: There’s No Ice</title>
+      <link>https://www.nytimes.com/2023/03/05/us/put-in-bay-ohio-ice.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/us/put-in-bay-ohio-ice.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/us/put-in-bay-ohio-ice.html" rel="standout"></atom:link>
+      <description>When the summer tourist season ends in Put-in-Bay, an island on Lake Erie, the residents turn to the ice for fun and to earn a living. What happens when the lake refuses to freeze?</description>
+      <dc:creator>Campbell Robertson and Madeleine Hordinski</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 14:41:07 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">vis-photo</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Put-in-Bay (Ohio)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Fishing, Sport</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Winter (Season)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Global Warming</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Ice</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/02/us/05nat-atc-putinbay-fader2/05nat-atc-putinbay-fader2-moth.jpg" width="151"></media:content>
+      <media:credit>Madeleine Hordinski for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>How to Be a Better Grandfather</title>
+      <link>https://www.nytimes.com/2023/03/03/well/family/grandfather-grandparent-how-to.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/03/well/family/grandfather-grandparent-how-to.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/03/well/family/grandfather-grandparent-how-to.html" rel="standout"></atom:link>
+      <description>Without cultural norms to guide them, some men are forging a new grandparenting path.</description>
+      <dc:creator>Paula Span and Sara Naomi Lewkowicz</dc:creator>
+      <pubDate>Fri, 03 Mar 2023 10:00:31 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Grandparents</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Children and Childhood</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/01/multimedia/WELL-GENERATION-GRANPARENT1-fklm/WELL-GENERATION-GRANPARENT1-fklm-moth-v2.jpg" width="151"></media:content>
+      <media:credit>Sara Naomi Lewkowicz for The New York Times</media:credit>
+    </item>
+    <item>
+      <title>Eileen Kelly, Host of the Podcast “Going Mental,” Isn’t the Typical Wellness Influencer</title>
+      <link>https://www.nytimes.com/2023/03/03/style/eileen-kelly-going-mental-podcast.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/03/style/eileen-kelly-going-mental-podcast.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/03/style/eileen-kelly-going-mental-podcast.html" rel="standout"></atom:link>
+      <description>Known first as a provocative Instagram influencer and sex blogger, Eileen Kelly is now equally frank about her mental health struggles.</description>
+      <dc:creator>Ezra Marcus</dc:creator>
+      <pubDate>Fri, 03 Mar 2023 19:06:27 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Kelly, Eileen (Podcaster)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Social Media</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mental Health and Disorders</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Sex Education</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Podcasts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Instagram Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Manhattan (NYC)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Content Type: Personal Profile</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/fashion/05EILEEN-KELLY-03-pjvk/05EILEEN-KELLY-03-pjvk-moth-v2.jpg" width="151"></media:content>
+      <media:credit>Peter Fisher for The New York Times</media:credit>
+      <media:description>“I remember my dad told me in high school, ‘Never put anything on the internet that you don’t want your teacher to see,’” said Eileen Kelly, 27. “And I was like, ‘Well, oops. I put literally everything on the internet.’”</media:description>
+    </item>
+    <item>
+      <title>Larry Hogan: I’m Not Seeking the Republican Nomination for President</title>
+      <link>https://www.nytimes.com/2023/03/05/opinion/larry-hogan-president-2024.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/opinion/larry-hogan-president-2024.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/opinion/larry-hogan-president-2024.html" rel="standout"></atom:link>
+      <description>I care more about ensuring a future for the Republican Party than securing my own future in the Republican Party.</description>
+      <dc:creator>Larry Hogan</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 13:45:06 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Republican Party</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Presidential Election of 2024</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Trump, Donald J</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Conservatism (US Politics)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Governors (US)</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/multimedia/05Politics-1-kpcf/05Politics-1-kpcf-moth.jpg" width="151"></media:content>
+      <media:credit>Julia Nikhinson/Associated Press</media:credit>
+    </item>
+    <item>
+      <title>The Fight Over ‘Tár’ Shows How Much We Conductors Love to Hate One Another</title>
+      <link>https://www.nytimes.com/2023/03/05/opinion/tar-cate-blanchett-conductors-classical-music.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/opinion/tar-cate-blanchett-conductors-classical-music.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/opinion/tar-cate-blanchett-conductors-classical-music.html" rel="standout"></atom:link>
+      <description>We conductors in general delight in denigrating one another — that is, until one of us is dead. In other words, we are human.</description>
+      <dc:creator>John Mauceri</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 17:33:34 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Classical Music</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Movies</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Academy Awards (Oscars)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">New York Philharmonic</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Blanchett, Cate</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Dudamel, Gustavo</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Field, Todd</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_ttl">Tar (Movie)</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/opinion/05mauceri/05mauceri-moth.jpg" width="151"></media:content>
+      <media:credit>Illustration by Jaya Miceli; photograph by Andrey Burmakin</media:credit>
+    </item>
+    <item>
+      <title>Take Threats of ‘National Divorce’ Seriously</title>
+      <link>https://www.nytimes.com/2023/03/05/opinion/national-divorce-civil-war.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/opinion/national-divorce-civil-war.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/opinion/national-divorce-civil-war.html" rel="standout"></atom:link>
+      <description>Animosity is the enemy of American unity.</description>
+      <dc:creator>David French</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 11:00:07 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Greene, Marjorie Taylor (1974- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Right-Wing Extremism and Alt-Right</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Storming of the US Capitol (Jan, 2021)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Secession and Independence Movements</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/opinion/05French-1/05French-1-moth.jpg" width="151"></media:content>
+      <media:credit>Buyenlarge/Getty Images</media:credit>
+    </item>
+    <item>
+      <title>Ford Is Leaving Tesla in the Dust</title>
+      <link>https://www.nytimes.com/2023/03/04/opinion/ford-tesla-bluecruise-self-driving-remote-work.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/04/opinion/ford-tesla-bluecruise-self-driving-remote-work.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/04/opinion/ford-tesla-bluecruise-self-driving-remote-work.html" rel="standout"></atom:link>
+      <description>Boring old Ford is proving to be a very modern company.</description>
+      <dc:creator>Ezra Dyer</dc:creator>
+      <pubDate>Sat, 04 Mar 2023 21:16:26 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Electric and Hybrid Vehicles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Automobiles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Driverless and Semiautonomous Vehicles</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Ford Motor Co</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Tesla Motors Inc</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Musk, Elon</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Twitter</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only</category>
+    </item>
+    <item>
+      <title>What to Cook This Week</title>
+      <link>https://www.nytimes.com/2023/03/05/dining/what-to-cook-this-week.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/dining/what-to-cook-this-week.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/dining/what-to-cook-this-week.html" rel="standout"></atom:link>
+      <description>Air-fryer tofu, brussels sprouts amatriciana toasts and more recipes.</description>
+      <dc:creator>Sam Sifton</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 16:00:03 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cooking and Cookbooks</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Content Type: Service</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2019/03/13/dining/13purim-A1-ref-copy/12Purim1-moth.jpg" width="151"></media:content>
+      <media:credit>Linda Xiao for The New York Times. Food Stylist: Simon Andrews.</media:credit>
+    </item>
+    <item>
+      <title>Can We Fire Our Employee? His Father Just Died.</title>
+      <link>https://www.nytimes.com/2023/03/03/magazine/firing-layoffs-ethics.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/03/magazine/firing-layoffs-ethics.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/03/magazine/firing-layoffs-ethics.html" rel="standout"></atom:link>
+      <description>The magazine’s Ethicist columnist on what employers owe their workers.</description>
+      <dc:creator>Kwame Anthony Appiah</dc:creator>
+      <pubDate>Fri, 03 Mar 2023 20:04:06 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Ethics (Personal)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only-nl</category>
+    </item>
+    <item>
+      <title>Dominate Me, but Not Like That</title>
+      <link>https://www.nytimes.com/2023/03/01/podcasts/modern-love-domination-kink-bdsm.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/01/podcasts/modern-love-domination-kink-bdsm.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/01/podcasts/modern-love-domination-kink-bdsm.html" rel="standout"></atom:link>
+      <description>After feeling hopeless about dating, the musician Aly Tadros discovered B.D.S.M. It was both painful and cathartic — and taught her what she really needed.</description>
+      <dc:creator>Anna Martin, Julia Botero, Christina Djossa, Elyssa Dudley, Hans Buetow, Sara Sarasohn, Jen Poyant and Sophia Lanman</dc:creator>
+      <pubDate>Wed, 01 Mar 2023 21:00:07 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Love (Emotion)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Online Dating</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Dating and Relationships</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Sex</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">audio-positive-escape</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">audio-neutral-immersive</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2018/06/10/fashion/01modernlove-podcast-image/01modernlove-podcast-image-moth-v3.jpg" width="151"></media:content>
+      <media:credit>Brian Rea</media:credit>
+    </item>
+    <item>
+      <title>Judy Heumann, Who Led the Fight for Disability Rights, Dies at 75</title>
+      <link>https://www.nytimes.com/2023/03/05/obituaries/judy-heumann-dead.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/obituaries/judy-heumann-dead.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/obituaries/judy-heumann-dead.html" rel="standout"></atom:link>
+      <description>She successfully battled to become a teacher and went on to help bring about a revolution in the government’s treatment of the disabled.</description>
+      <dc:creator>Alex Traub</dc:creator>
+      <pubDate>Mon, 06 Mar 2023 00:30:33 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Disabilities</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Deaths (Obituaries)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Americans With Disabilities Act</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Heumann, Judith (1947-2023)</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/06/multimedia/05heumann1-wmfk/05heumann1-wmfk-moth.jpg" width="151"></media:content>
+      <media:credit>John Duricka/Associated Press</media:credit>
+      <media:description>Judy Heumann in 1982, with Ed Roberts, director of the California State Department of Rehabilitation. They called attention to the Reagan administration’s cutbacks in funds for programs for the disabled.</media:description>
+    </item>
+    <item>
+      <title>A Second Norfolk Southern Train Derails in Ohio</title>
+      <link>https://www.nytimes.com/2023/03/05/us/ohio-train-derailment.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/us/ohio-train-derailment.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/us/ohio-train-derailment.html" rel="standout"></atom:link>
+      <description>Though no hazardous materials leaked, the crash near Springfield, Ohio, on Saturday renewed questions about rail safety, just over a month after the East Palestine derailment.</description>
+      <dc:creator>Eduardo Medina and Claire Fahy</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 23:37:52 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Railroad Accidents and Safety</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Freight (Cargo)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Norfolk Southern Corporation</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Springfield (Ohio)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Hazardous and Toxic Substances</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/04/multimedia/04xp-Ohio-derail/04xp-Ohio-derail-moth.jpg" width="151"></media:content>
+      <media:credit>Bill Lackey/Springfield News-Sun</media:credit>
+      <media:description>A Norfolk Southern train derailed near Springfield, Ohio, on Saturday with 28 of 212 cars leaving the track, officials said.</media:description>
+    </item>
+    <item>
+      <title>Rules to Curb Illicit Dollar Flows Create Unintended Hardships for Some Iraqis</title>
+      <link>https://www.nytimes.com/2023/03/03/world/middleeast/iraq-currency-sanctions-economy.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/03/world/middleeast/iraq-currency-sanctions-economy.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/03/world/middleeast/iraq-currency-sanctions-economy.html" rel="standout"></atom:link>
+      <description>The regulations were meant to prevent dollar transfers to corrupt actors. But they have ended up harming ordinary Iraqis who need U.S. currency for legitimate purposes.</description>
+      <dc:creator>Alissa J. Rubin</dc:creator>
+      <pubDate>Sat, 04 Mar 2023 05:40:45 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Iraq</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Currency</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">US Dollar (Currency)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Banking and Financial Institutions</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Central Bank of Iraq</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Federal Reserve Bank of New York</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Treasury Department</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">United States International Relations</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/02/24/world/00iraq-currency/00iraq-currency-moth.jpg" width="151"></media:content>
+      <media:credit>Joao Silva/The New York Times</media:credit>
+      <media:description>Waiting outside an authorized currency dealer in Baghdad to exchange Iraqi dinars for U.S. dollars. </media:description>
+    </item>
+    <item>
+      <title>In Jon Jones’s Triumphant Return, a Champion Watched From Afar</title>
+      <link>https://www.nytimes.com/2023/03/05/sports/ufc-jon-jones-ciryl-gane-ngannou.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/05/sports/ufc-jon-jones-ciryl-gane-ngannou.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/05/sports/ufc-jon-jones-ciryl-gane-ngannou.html" rel="standout"></atom:link>
+      <description>After three years off, Jones won the Ultimate Fighting Championship’s heavyweight title. But it was against Ciryl Gane, not Francis Ngannou, who had held the title before parting ways with the U.F.C.</description>
+      <dc:creator>Emmanuel Morgan</dc:creator>
+      <pubDate>Sun, 05 Mar 2023 21:41:32 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Mixed Martial Arts</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Boxing</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Ultimate Fighting Championship</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Jones, Jon (1987- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Ngannou, Francis (1986- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Miocic, Stipe (1982- )</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">White, Dana (1969- )</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/multimedia/05ufc-jones-1-qgbc/05ufc-jones-1-qgbc-moth.jpg" width="151"></media:content>
+      <media:credit>Patrick T. Fallon/Agence France-Presse — Getty Images</media:credit>
+      <media:description>Jon Jones celebrated after beating Ciryl Gane in Las Vegas on Saturday night for the vacant U.F.C. heavyweight title.</media:description>
+    </item>
+    <item>
+      <title>Sahadi’s, the Brooklyn Grocery Store That Feeds Nostalgia</title>
+      <link>https://www.nytimes.com/2023/03/01/t-magazine/sahadis-middle-eastern-new-york-grocery.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2023/03/01/t-magazine/sahadis-middle-eastern-new-york-grocery.html</guid>
+      <atom:link href="https://www.nytimes.com/2023/03/01/t-magazine/sahadis-middle-eastern-new-york-grocery.html" rel="standout"></atom:link>
+      <description>Sahadi’s, on Atlantic Avenue, has specialized in Middle Eastern comfort food for the past 75 years. Now, with a second location and a lively cafe, the family-run market is courting a new following.</description>
+      <dc:creator>Reggie Nadelson</dc:creator>
+      <pubDate>Wed, 01 Mar 2023 21:37:52 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Sahadi&#39;s</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Supermarkets and Grocery Stores</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cheese</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Food</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Cooking and Cookbooks</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_geo">Brooklyn (NYC)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Bakeries and Baked Products</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/02/22/t-magazine/food/22tmag-Sahadis-slide-U39C-copy/22tmag-Sahadis-slide-U39C-copy-moth.jpg" width="151"></media:content>
+      <media:credit>Chase Middleton</media:credit>
+      <media:description>The flagship Sahadi’s grocery store on Brooklyn’s Atlantic Avenue. The business is currently run by the fourth and fifth generations of the Sahadi family. From left: Christine Sahadi Whelan, Pat Whelan, Michael Whelan, Caitlin Whelan and Ron Sahadi.</media:description>
+    </item>
+    <item>
+      <title>Few Wordle Players Use Consistent Starting Words, but When They Do, It’s ADIEU</title>
+      <link>https://www.nytimes.com/2022/09/01/crosswords/wordle-starting-words-adieu.html</link>
+      <guid isPermaLink="true">https://www.nytimes.com/2022/09/01/crosswords/wordle-starting-words-adieu.html</guid>
+      <atom:link href="https://www.nytimes.com/2022/09/01/crosswords/wordle-starting-words-adieu.html" rel="standout"></atom:link>
+      <description>What the data tells us about how people play the game.</description>
+      <dc:creator>Deb Amlen</dc:creator>
+      <pubDate>Thu, 01 Sep 2022 18:40:21 +0000</pubDate>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Wordle (Puzzle)</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/des">Games</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">New York Times</category>
+      <category domain="http://www.nytimes.com/namespaces/keywords/nyt_per">Gates, Bill</category>
+      <media:content height="151" medium="image" url="https://static01.nyt.com/images/2022/08/25/crosswords/wordle-top/wordle-top-moth.jpg" width="151"></media:content>
+      <media:credit>Stefani Reynolds/Agence France-Presse, via Getty Images</media:credit>
+      <media:description>Wordle gives players six tries to guess the daily word. Only a small number of people go in with a plan.</media:description>
+    </item>
+  </channel>
+</rss>
