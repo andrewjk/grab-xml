@@ -12,8 +12,9 @@
     "test": "uvu -r tsm tests"
   },
   "keywords": [
-    "xpath",
-    "txml"
+    "xml",
+    "html",
+    "parse"
   ],
   "author": "andrewjk",
   "license": "ISC",
