@@ -1,3 +1,4 @@
+import Options from "../types/Options";
 import XmlNode from "../types/XmlNode";
 import XmlNodeType from "../types/XmlNodeType";
 
@@ -68,7 +69,7 @@ const closeSquareCode = "]".charCodeAt(0);
  * @param content The XML content to parse
  * @returns A root element node with the XML's elements as children
  */
-export default function grabXml(content: string) {
+export default function grabXml(content: string, options: Options = {}) {
   const root: XmlNode = {
     type: XmlNodeType.ELEMENT,
     parent: null,
@@ -132,16 +133,20 @@ export default function grabXml(content: string) {
           }
           case exclamationCode: {
             if (content.charCodeAt(i + 1) === dashCode && content.charCodeAt(i + 2) === dashCode) {
-              const child: XmlNode = {
-                type: XmlNodeType.COMMENT,
-                parent: state.node,
-                tag: "",
-                attributes: {},
-                children: [],
-                text: "",
-              };
-              state.node.children.push(child);
-              updateState(state, ParseLocation.INSIDE_COMMENT, i + 3, child);
+              if (options.ignoreComments) {
+                updateState(state, ParseLocation.INSIDE_COMMENT, i + 3);
+              } else {
+                const child: XmlNode = {
+                  type: XmlNodeType.COMMENT,
+                  parent: state.node,
+                  tag: "",
+                  attributes: {},
+                  children: [],
+                  text: "",
+                };
+                state.node.children.push(child);
+                updateState(state, ParseLocation.INSIDE_COMMENT, i + 3, child);
+              }
               i += 2;
               break;
             } else if (
@@ -390,15 +395,7 @@ export default function grabXml(content: string) {
         // that the text may need to be decoded
         switch (content.charCodeAt(i)) {
           case openTriangleCode: {
-            state.node.text = content.substring(state.start, i);
-            if (textNeedsDecoding) {
-              state.node.text = state.node.text
-                .replaceAll("&lt;", "<")
-                .replaceAll("&gt;", ">")
-                .replaceAll("&amp;", "&")
-                .replaceAll("&apos;", "'")
-                .replaceAll("&quot;", '"');
-            }
+            setTextContent(content, i, state, textNeedsDecoding, options.trimWhitespace);
             updateState(state, ParseLocation.ELEMENT_OPENED, i, state.node.parent);
             break;
           }
@@ -416,9 +413,13 @@ export default function grabXml(content: string) {
           content.charCodeAt(i + 1) === dashCode &&
           content.charCodeAt(i + 2) === closeTriangleCode
         ) {
-          // Just trim comments, I don't think the surrounding whitespace is ever going to be interesting
-          state.node.text = content.substring(state.start, i).trim();
-          updateState(state, ParseLocation.NONE, i + 3, state.node.parent);
+          if (options.ignoreComments) {
+            updateState(state, ParseLocation.NONE, i + 3);
+          } else {
+            // Just trim comments, I don't think the surrounding whitespace is ever going to be interesting
+            state.node.text = content.substring(state.start, i).trim();
+            updateState(state, ParseLocation.NONE, i + 3, state.node.parent);
+          }
           i += 2;
         }
         break;
@@ -450,7 +451,11 @@ export default function grabXml(content: string) {
           }
           case closeTriangleCode: {
             if (!inDocTypeEntities) {
-              state.node.text = content.substring(state.start, i).trim();
+              if (options.ignoreInstructions) {
+                state.node.parent.children.pop();
+              } else {
+                state.node.text = content.substring(state.start, i).trim();
+              }
               updateState(state, ParseLocation.NONE, i, state.node.parent);
             }
             break;
@@ -464,7 +469,11 @@ export default function grabXml(content: string) {
           content.charCodeAt(i) === questionCode &&
           content.charCodeAt(i + 1) === closeTriangleCode
         ) {
-          state.node.text = content.substring(state.start, i).trim();
+          if (options.ignoreInstructions) {
+            state.node.parent.children.pop();
+          } else {
+            state.node.text = content.substring(state.start, i).trim();
+          }
           updateState(state, ParseLocation.NONE, i + 2, state.node.parent);
           i += 1;
         }
@@ -473,7 +482,37 @@ export default function grabXml(content: string) {
     }
   }
 
+  // Finish off any text that was located at the end
+  // I think it's safe to ignore other types of nodes as they would be unclosed and in error here
+  if (state.location === ParseLocation.INSIDE_TEXT) {
+    setTextContent(content, content.length, state, textNeedsDecoding, options.trimWhitespace);
+  }
+
   return root;
+}
+
+function setTextContent(
+  content: string,
+  i: number,
+  state: ParseState,
+  textNeedsDecoding: boolean,
+  trimWhitespace?: boolean
+) {
+  state.node.text = content.substring(state.start, i);
+  if (textNeedsDecoding) {
+    state.node.text = state.node.text
+      .replaceAll("&lt;", "<")
+      .replaceAll("&gt;", ">")
+      .replaceAll("&amp;", "&")
+      .replaceAll("&apos;", "'")
+      .replaceAll("&quot;", '"');
+  }
+  if (trimWhitespace) {
+    state.node.text = state.node.text.trim();
+    if (!state.node.text) {
+      state.node.parent.children.pop();
+    }
+  }
 }
 
 function updateState(state: ParseState, location: ParseLocation, breakPos: number, node?: XmlNode) {

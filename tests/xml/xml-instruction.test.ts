@@ -58,6 +58,11 @@ test("XML with prolog instruction", () => {
   };
 
   assert.equal(doc, expected);
+
+  // Also try it without spaces between elements
+  const doc2 = grabXml(xml.replace(/\>\s+\</g, "><"));
+  sanitizeNode(doc2);
+  assert.equal(doc2, expected);
 });
 
 test.run();

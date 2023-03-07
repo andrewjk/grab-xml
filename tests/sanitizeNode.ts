@@ -1,4 +1,5 @@
-import { XmlNode, XmlNodeType } from "../types/XmlNode";
+import XmlNode from "../types/XmlNode";
+import XmlNodeType from "../types/XmlNodeType";
 
 export default function sanitizeNode(node: XmlNode) {
   // Delete parents (to remove circular references)
@@ -20,15 +21,15 @@ export default function sanitizeNode(node: XmlNode) {
     delete node.attributes;
   }
 
+  // Remove empty text nodes
+  node.children = node.children.filter((c) => c.type !== XmlNodeType.TEXT || !!c.text.trim());
+
   // Remove empty children
   if (!node.children.length) {
     delete node.children;
   }
 
   if (node.children) {
-    // Remove empty text nodes
-    node.children = node.children.filter((c) => c.type !== XmlNodeType.TEXT || !!c.text.trim());
-
     // Sanitize the children
     for (let child of node.children) {
       sanitizeNode(child);
