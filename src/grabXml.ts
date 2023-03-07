@@ -27,14 +27,16 @@ enum ParseLocation {
   ATTRIBUTE_VALUE,
   /** Inside a text node */
   INSIDE_TEXT,
-  /** Inside a comment node */
-  INSIDE_COMMENT,
   /** Inside a CDATA node */
   INSIDE_CDATA,
+  /** Inside a comment node */
+  INSIDE_COMMENT,
   /** Inside a DOCTYPE node */
   INSIDE_DOCTYPE,
   /** Inside an instruction node, such as <?xml ... ?> */
   INSIDE_INSTRUCTION,
+  /** Inside a literal node, such as <script> or <style> in HTML */
+  INSIDE_LITERAL,
 }
 
 interface ParseState {
@@ -133,20 +135,16 @@ export default function grabXml(content: string, options: Options = {}) {
           }
           case exclamationCode: {
             if (content.charCodeAt(i + 1) === dashCode && content.charCodeAt(i + 2) === dashCode) {
-              if (options.ignoreComments) {
-                updateState(state, ParseLocation.INSIDE_COMMENT, i + 3);
-              } else {
-                const child: XmlNode = {
-                  type: XmlNodeType.COMMENT,
-                  parent: state.node,
-                  tag: "",
-                  attributes: {},
-                  children: [],
-                  text: "",
-                };
-                state.node.children.push(child);
-                updateState(state, ParseLocation.INSIDE_COMMENT, i + 3, child);
-              }
+              const child: XmlNode = {
+                type: XmlNodeType.COMMENT,
+                parent: state.node,
+                tag: "",
+                attributes: {},
+                children: [],
+                text: "",
+              };
+              state.node.children.push(child);
+              updateState(state, ParseLocation.INSIDE_COMMENT, i + 3, child);
               i += 2;
               break;
             } else if (
@@ -217,7 +215,8 @@ export default function grabXml(content: string, options: Options = {}) {
         switch (content.charCodeAt(i)) {
           case closeTriangleCode: {
             state.node.tag = content.substring(state.start, i);
-            updateState(state, ParseLocation.NONE, i);
+            maybeSelfClose(state, options);
+            maybeConvertToLiteral(state, i, options);
             break;
           }
           case spaceCode:
@@ -265,11 +264,8 @@ export default function grabXml(content: string, options: Options = {}) {
             break;
           }
           case closeTriangleCode: {
-            // TODO: Handle other types of automatically self-closing nodes, like <link> in HTML
-            if (state.node.tag.startsWith("?")) {
-              state.node = state.node.parent;
-            }
-            updateState(state, ParseLocation.NONE, i);
+            maybeSelfClose(state, options);
+            maybeConvertToLiteral(state, i, options);
             break;
           }
           case questionCode: {
@@ -302,7 +298,8 @@ export default function grabXml(content: string, options: Options = {}) {
           }
           case closeTriangleCode: {
             state.node.attributes[content.substring(state.start, i)] = "";
-            updateState(state, ParseLocation.NONE, i);
+            maybeSelfClose(state, options);
+            maybeConvertToLiteral(state, i, options);
             break;
           }
           case slashCode: {
@@ -406,24 +403,6 @@ export default function grabXml(content: string, options: Options = {}) {
         }
         break;
       }
-      case ParseLocation.INSIDE_COMMENT: {
-        // Check for the comment end chars to close the comment and move on
-        if (
-          content.charCodeAt(i) === dashCode &&
-          content.charCodeAt(i + 1) === dashCode &&
-          content.charCodeAt(i + 2) === closeTriangleCode
-        ) {
-          if (options.ignoreComments) {
-            updateState(state, ParseLocation.NONE, i + 3);
-          } else {
-            // Just trim comments, I don't think the surrounding whitespace is ever going to be interesting
-            state.node.text = content.substring(state.start, i).trim();
-            updateState(state, ParseLocation.NONE, i + 3, state.node.parent);
-          }
-          i += 2;
-        }
-        break;
-      }
       case ParseLocation.INSIDE_CDATA: {
         // Check for the CDATA end chars to close the text and move on
         if (
@@ -431,8 +410,21 @@ export default function grabXml(content: string, options: Options = {}) {
           content.charCodeAt(i + 1) === closeSquareCode &&
           content.charCodeAt(i + 2) === closeTriangleCode
         ) {
-          state.node.text = content.substring(state.start, i).trim();
+          setTextContent(content, i, state, false, options.trimWhitespace);
           updateState(state, ParseLocation.NONE, i + 3, state.node.parent);
+          i += 2;
+        }
+        break;
+      }
+      case ParseLocation.INSIDE_COMMENT: {
+        // Check for the comment end chars to close the comment and move on
+        if (
+          content.charCodeAt(i) === dashCode &&
+          content.charCodeAt(i + 1) === dashCode &&
+          content.charCodeAt(i + 2) === closeTriangleCode
+        ) {
+          closeIgnorableNode(content, i, state, options.ignoreComments);
+          state.start = i + 3;
           i += 2;
         }
         break;
@@ -451,12 +443,7 @@ export default function grabXml(content: string, options: Options = {}) {
           }
           case closeTriangleCode: {
             if (!inDocTypeEntities) {
-              if (options.ignoreInstructions) {
-                state.node.parent.children.pop();
-              } else {
-                state.node.text = content.substring(state.start, i).trim();
-              }
-              updateState(state, ParseLocation.NONE, i, state.node.parent);
+              closeIgnorableNode(content, i, state, options.ignoreInstructions);
             }
             break;
           }
@@ -469,13 +456,21 @@ export default function grabXml(content: string, options: Options = {}) {
           content.charCodeAt(i) === questionCode &&
           content.charCodeAt(i + 1) === closeTriangleCode
         ) {
-          if (options.ignoreInstructions) {
-            state.node.parent.children.pop();
-          } else {
-            state.node.text = content.substring(state.start, i).trim();
-          }
-          updateState(state, ParseLocation.NONE, i + 2, state.node.parent);
+          closeIgnorableNode(content, i, state, options.ignoreInstructions);
+          state.start = i + 2;
           i += 1;
+        }
+        break;
+      }
+      case ParseLocation.INSIDE_LITERAL: {
+        // Check for the node end tag to close the node and move on
+        if (content.charCodeAt(i) === openTriangleCode && content.charCodeAt(i + 1) === slashCode) {
+          const tagLength = state.node.tag.length;
+          if (content.substring(i + 2, i + 2 + tagLength) === state.node.tag) {
+            state.node.text = content.substring(state.start, i);
+            updateState(state, ParseLocation.NONE, i + 3 + tagLength, state.node.parent);
+            i += 2 + tagLength;
+          }
         }
         break;
       }
@@ -513,6 +508,35 @@ function setTextContent(
       state.node.parent.children.pop();
     }
   }
+}
+
+function maybeSelfClose(state: ParseState, options: Options) {
+  // Automatically self-close instruction nodes and void elements like <link> in HTML
+  if (
+    state.node.tag.startsWith("?") ||
+    (options.voidElements && options.voidElements.includes(state.node.tag))
+  ) {
+    state.node = state.node.parent;
+  }
+}
+
+function maybeConvertToLiteral(state: ParseState, i: number, options: Options) {
+  // Maybe convert this element to a literal
+  if (options.literalElements && options.literalElements.includes(state.node.tag)) {
+    state.node.type = XmlNodeType.LITERAL;
+    updateState(state, ParseLocation.INSIDE_LITERAL, i + 1);
+  } else {
+    updateState(state, ParseLocation.NONE, i);
+  }
+}
+
+function closeIgnorableNode(content: string, i: number, state: ParseState, ignoreNode: boolean) {
+  if (ignoreNode) {
+    state.node.parent.children.pop();
+  } else {
+    state.node.text = content.substring(state.start, i);
+  }
+  updateState(state, ParseLocation.NONE, i, state.node.parent);
 }
 
 function updateState(state: ParseState, location: ParseLocation, breakPos: number, node?: XmlNode) {

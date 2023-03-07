@@ -4,12 +4,13 @@ import grabXml from "../../src/grabXml";
 import XmlNodeType from "../../types/XmlNodeType";
 import sanitizeNode from "../sanitizeNode";
 
-test("XML with character data (CDATA)", () => {
+test("XML namespaces", () => {
   const xml = `
-<xml>
-  <![CDATA[I'm <em>character</em> data]]>
-  <![CDATA[I_have_no_spaces]]>
-</xml>
+<x:xml xmlns:x="https://www.w3.org/TR/html4/">
+  <x:element>
+    Element one
+  </x:element>
+</x:xml>
 `;
 
   const doc = grabXml(xml);
@@ -21,15 +22,20 @@ test("XML with character data (CDATA)", () => {
     children: [
       {
         type: XmlNodeType.ELEMENT,
-        tag: "xml",
+        tag: "x:xml",
+        attributes: {
+          "xmlns:x": "https://www.w3.org/TR/html4/",
+        },
         children: [
           {
-            type: XmlNodeType.TEXT,
-            text: "I'm <em>character</em> data",
-          },
-          {
-            type: XmlNodeType.TEXT,
-            text: "I_have_no_spaces",
+            type: XmlNodeType.ELEMENT,
+            tag: "x:element",
+            children: [
+              {
+                type: XmlNodeType.TEXT,
+                text: "Element one",
+              },
+            ],
           },
         ],
       },
@@ -37,12 +43,6 @@ test("XML with character data (CDATA)", () => {
   };
 
   assert.equal(doc, expected);
-
-  // Also try it without spaces between elements
-  const xml2 = xml.replace(/\>\s+\</g, "><");
-  const doc2 = grabXml(xml2);
-  sanitizeNode(doc2);
-  assert.equal(doc2, expected);
 });
 
 test.run();

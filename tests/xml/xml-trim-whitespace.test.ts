@@ -1,8 +1,8 @@
 import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
-import XmlNode from "../../types/XmlNode";
 import XmlNodeType from "../../types/XmlNodeType";
+import sanitizeNode from "../sanitizeNode";
 
 test("XML trimming whitespace", () => {
   const xml = `
@@ -15,7 +15,7 @@ test("XML trimming whitespace", () => {
 
   const options = { trimWhitespace: true };
   const doc = grabXml(xml, options);
-  sanitizeNode(doc);
+  sanitizeNode(doc, false);
 
   const expected = {
     type: XmlNodeType.ELEMENT,
@@ -47,31 +47,3 @@ test("XML trimming whitespace", () => {
 });
 
 test.run();
-
-// We can't use the regular sanitizeNode method because it removes whitespace
-function sanitizeNode(node: XmlNode) {
-  // Delete parents (to remove circular references)
-  delete node.parent;
-
-  // Remove empty tags
-  if (!node.tag) {
-    delete node.tag;
-  }
-
-  // Remove empty attributes
-  if (!Object.keys(node.attributes).length) {
-    delete node.attributes;
-  }
-
-  // Remove empty children
-  if (!node.children.length) {
-    delete node.children;
-  }
-
-  if (node.children) {
-    // Sanitize the children
-    for (let child of node.children) {
-      sanitizeNode(child);
-    }
-  }
-}

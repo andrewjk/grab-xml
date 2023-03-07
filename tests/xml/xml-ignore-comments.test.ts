@@ -36,7 +36,8 @@ test("XML ignoring comments", () => {
   assert.equal(doc, expected);
 
   // Also try it without spaces between elements
-  const doc2 = grabXml(xml.replace(/\>\s+\</g, "><"), options);
+  const xml2 = xml.replace(/\>\s+\</g, "><");
+  const doc2 = grabXml(xml2, options);
   sanitizeNode(doc2);
   assert.equal(doc2, expected);
 });

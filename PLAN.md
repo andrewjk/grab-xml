@@ -10,10 +10,10 @@ Comments ✓
 CDATA ✓
 DOCTYPE ✓
 Replace predefined entities ✓
-Options
-Trim whitespace
-Self-closing HTML elements
+Options ✓
+Trim whitespace ✓
+Self-closing HTML elements ✓
 grabHtml function
-Namespaces
+Namespaces ✓
 Streams
 Perf tests ✓

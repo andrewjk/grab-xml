@@ -4,7 +4,7 @@ import grabXml from "../../src/grabXml";
 import XmlNodeType from "../../types/XmlNodeType";
 import sanitizeNode from "../sanitizeNode";
 
-test("XML with elements", () => {
+test("XML decoding entities", () => {
   const xml = `
 <xml>
   <element>

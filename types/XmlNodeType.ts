@@ -8,6 +8,8 @@ enum XmlNodeType {
   COMMENT,
   /** A processing instruction node, such as <!DOCTYPE> or <?xml> */
   INSTRUCTION,
+  /** An element that has been extracted with its unprocessed text content */
+  LITERAL,
 }
 
 export default XmlNodeType;
