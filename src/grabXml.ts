@@ -495,7 +495,7 @@ function startElementNode(content: string, i: number, state: ParseState, options
 
   // Maybe convert this element to a literal, like <script> in HTML
   if (options.literalElements && options.literalElements.includes(state.node.tag)) {
-    const endIndex = content.indexOf("</" + state.node.tag + ">");
+    const endIndex = content.indexOf("</" + state.node.tag + ">", i);
     if (endIndex !== -1) {
       state.node.type = XmlNodeType.LITERAL;
       state.node.text = content.substring(i + 1, endIndex);
