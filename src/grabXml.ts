@@ -27,16 +27,10 @@ enum ParseLocation {
   ATTRIBUTE_VALUE,
   /** Inside a text node */
   INSIDE_TEXT,
-  /** Inside a CDATA node */
-  INSIDE_CDATA,
-  /** Inside a comment node */
-  INSIDE_COMMENT,
   /** Inside a DOCTYPE node */
   INSIDE_DOCTYPE,
   /** Inside an instruction node, such as <?xml ... ?> */
   INSIDE_INSTRUCTION,
-  /** Inside a literal node, such as <script> or <style> in HTML */
-  INSIDE_LITERAL,
 }
 
 interface ParseState {
@@ -135,37 +129,63 @@ export default function grabXml(content: string, options: Options = {}) {
           }
           case exclamationCode: {
             if (content.charCodeAt(i + 1) === dashCode && content.charCodeAt(i + 2) === dashCode) {
-              const child: XmlNode = {
-                type: XmlNodeType.COMMENT,
-                parent: state.node,
-                tag: "",
-                attributes: {},
-                children: [],
-                text: "",
-              };
-              state.node.children.push(child);
-              updateState(state, ParseLocation.INSIDE_COMMENT, i + 3, child);
-              i += 2;
+              // It's a comment
+              const endIndex = content.indexOf("-->", i);
+              if (!options.ignoreComments) {
+                if (endIndex !== -1) {
+                  const child: XmlNode = {
+                    type: XmlNodeType.COMMENT,
+                    parent: state.node,
+                    tag: "",
+                    attributes: {},
+                    children: [],
+                    text: "",
+                  };
+                  state.node.children.push(child);
+                  updateState(state, ParseLocation.NONE, i + 3, child);
+                  i = endIndex;
+                  setTextContent(content, i, state, false, options.trimWhitespace);
+                  updateState(state, ParseLocation.NONE, i, state.node.parent);
+                  i += 2;
+                } else {
+                  // TODO: ??
+                }
+              } else {
+                i = endIndex + 2;
+                updateState(state, ParseLocation.NONE, i);
+              }
               break;
             } else if (
               content.charCodeAt(i + 1) === openSquareCode &&
               content.charCodeAt(i + 7) === openSquareCode &&
               content.substring(i + 2, i + 7).toLowerCase() === "cdata"
             ) {
-              const child: XmlNode = {
-                type: XmlNodeType.TEXT,
-                parent: state.node,
-                tag: "",
-                attributes: {},
-                children: [],
-                text: "",
-              };
-              state.node.children.push(child);
-              updateState(state, ParseLocation.INSIDE_CDATA, i + 8, child);
-              i += 7;
+              // It's CDATA
+              const endIndex = content.indexOf("]]>", i);
+              if (endIndex !== -1) {
+                const child: XmlNode = {
+                  type: XmlNodeType.TEXT,
+                  parent: state.node,
+                  tag: "",
+                  attributes: {},
+                  children: [],
+                  text: "",
+                };
+                state.node.children.push(child);
+                updateState(state, ParseLocation.NONE, i + 8, child);
+                i = endIndex;
+                setTextContent(content, i, state, false, options.trimWhitespace);
+                updateState(state, ParseLocation.NONE, i, state.node.parent);
+                i += 2;
+              } else {
+                // TODO: ??
+              }
               break;
+            } else {
+              // It's probably DOCTYPE
+              // Fallthrough to default processing to include the exclamation mark in the tag:
+              // break;
             }
-            // Fallthrough to default processing to include the exclamation mark in the tag
           }
           default: {
             const child: XmlNode = {
@@ -215,8 +235,7 @@ export default function grabXml(content: string, options: Options = {}) {
         switch (content.charCodeAt(i)) {
           case closeTriangleCode: {
             state.node.tag = content.substring(state.start, i);
-            maybeSelfClose(state, options);
-            maybeConvertToLiteral(state, i, options);
+            i = startElementNode(content, i, state, options);
             break;
           }
           case spaceCode:
@@ -264,13 +283,7 @@ export default function grabXml(content: string, options: Options = {}) {
             break;
           }
           case closeTriangleCode: {
-            maybeSelfClose(state, options);
-            maybeConvertToLiteral(state, i, options);
-            break;
-          }
-          case questionCode: {
-            // Ignore this -- it's probably at the end of the xml definition node and shouldn't cause a
-            // change in the parse state
+            i = startElementNode(content, i, state, options);
             break;
           }
           case spaceCode:
@@ -298,8 +311,7 @@ export default function grabXml(content: string, options: Options = {}) {
           }
           case closeTriangleCode: {
             state.node.attributes[content.substring(state.start, i)] = "";
-            maybeSelfClose(state, options);
-            maybeConvertToLiteral(state, i, options);
+            i = startElementNode(content, i, state, options);
             break;
           }
           case slashCode: {
@@ -403,34 +415,8 @@ export default function grabXml(content: string, options: Options = {}) {
         }
         break;
       }
-      case ParseLocation.INSIDE_CDATA: {
-        // Check for the CDATA end chars to close the text and move on
-        if (
-          content.charCodeAt(i) === closeSquareCode &&
-          content.charCodeAt(i + 1) === closeSquareCode &&
-          content.charCodeAt(i + 2) === closeTriangleCode
-        ) {
-          setTextContent(content, i, state, false, options.trimWhitespace);
-          updateState(state, ParseLocation.NONE, i + 3, state.node.parent);
-          i += 2;
-        }
-        break;
-      }
-      case ParseLocation.INSIDE_COMMENT: {
-        // Check for the comment end chars to close the comment and move on
-        if (
-          content.charCodeAt(i) === dashCode &&
-          content.charCodeAt(i + 1) === dashCode &&
-          content.charCodeAt(i + 2) === closeTriangleCode
-        ) {
-          closeIgnorableNode(content, i, state, options.ignoreComments);
-          state.start = i + 3;
-          i += 2;
-        }
-        break;
-      }
       case ParseLocation.INSIDE_DOCTYPE: {
-        // Check for the DOCTYPE end chars to close the text and move on, or the entities
+        // Check for the DOCTYPE end char to close the text and move on, or the entities
         // chars ([ and ]) to prevent closing
         switch (content.charCodeAt(i)) {
           case openSquareCode: {
@@ -443,7 +429,7 @@ export default function grabXml(content: string, options: Options = {}) {
           }
           case closeTriangleCode: {
             if (!inDocTypeEntities) {
-              closeIgnorableNode(content, i, state, options.ignoreInstructions);
+              finishIgnorableNode(content, i, state, options.ignoreInstructions);
             }
             break;
           }
@@ -451,26 +437,14 @@ export default function grabXml(content: string, options: Options = {}) {
         break;
       }
       case ParseLocation.INSIDE_INSTRUCTION: {
-        // Check for the comment end chars to close the comment and move on
+        // Check for the instruction end chars to close the instruction and move on
         if (
           content.charCodeAt(i) === questionCode &&
           content.charCodeAt(i + 1) === closeTriangleCode
         ) {
-          closeIgnorableNode(content, i, state, options.ignoreInstructions);
+          finishIgnorableNode(content, i, state, options.ignoreInstructions);
           state.start = i + 2;
           i += 1;
-        }
-        break;
-      }
-      case ParseLocation.INSIDE_LITERAL: {
-        // Check for the node end tag to close the node and move on
-        if (content.charCodeAt(i) === openTriangleCode && content.charCodeAt(i + 1) === slashCode) {
-          const tagLength = state.node.tag.length;
-          if (content.substring(i + 2, i + 2 + tagLength) === state.node.tag) {
-            state.node.text = content.substring(state.start, i);
-            updateState(state, ParseLocation.NONE, i + 3 + tagLength, state.node.parent);
-            i += 2 + tagLength;
-          }
         }
         break;
       }
@@ -510,32 +484,44 @@ function setTextContent(
   }
 }
 
-function maybeSelfClose(state: ParseState, options: Options) {
-  // Automatically self-close instruction nodes and void elements like <link> in HTML
+function startElementNode(content: string, i: number, state: ParseState, options: Options) {
+  // Automatically self-close instruction nodes and void elements, like <link> in HTML
   if (
     state.node.tag.startsWith("?") ||
     (options.voidElements && options.voidElements.includes(state.node.tag))
   ) {
     state.node = state.node.parent;
   }
-}
 
-function maybeConvertToLiteral(state: ParseState, i: number, options: Options) {
-  // Maybe convert this element to a literal
+  // Maybe convert this element to a literal, like <script> in HTML
   if (options.literalElements && options.literalElements.includes(state.node.tag)) {
-    state.node.type = XmlNodeType.LITERAL;
-    updateState(state, ParseLocation.INSIDE_LITERAL, i + 1);
-  } else {
-    updateState(state, ParseLocation.NONE, i);
+    const endIndex = content.indexOf("</" + state.node.tag + ">");
+    if (endIndex !== -1) {
+      state.node.type = XmlNodeType.LITERAL;
+      state.node.text = content.substring(i + 1, endIndex);
+      const tagLength = state.node.tag.length;
+      updateState(state, ParseLocation.NONE, endIndex + 3 + tagLength, state.node.parent);
+      i = endIndex + 2 + tagLength;
+    } else {
+      // TODO: ??
+    }
   }
+
+  updateState(state, ParseLocation.NONE, i);
+
+  // HACK: If we converted the element to a literal, we need to return the jumped-ahead index
+  return i;
 }
 
-function closeIgnorableNode(content: string, i: number, state: ParseState, ignoreNode: boolean) {
+function finishIgnorableNode(content: string, i: number, state: ParseState, ignoreNode: boolean) {
+  // If the node is one that should be ignored, remove it from its parent's children
+  // Otherwise, set its text
   if (ignoreNode) {
     state.node.parent.children.pop();
   } else {
     state.node.text = content.substring(state.start, i);
   }
+
   updateState(state, ParseLocation.NONE, i, state.node.parent);
 }
 
