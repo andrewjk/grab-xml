@@ -14,6 +14,7 @@
       <url>https://static01.nyt.com/images/misc/NYT_logo_rss_250x40.png</url>
       <link>https://www.nytimes.com</link>
     </image>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>What Trench Warfare on Ukraine’s Front Line Looks Like</title>
       <link>https://www.nytimes.com/2023/03/05/world/europe/trench-warfare-ukraine-frontline.html</link>
@@ -30,6 +31,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/multimedia/05Ukraine-Trench-Photos-1A/00Ukraine-Trench-Photos-04-vthg-moth.jpg" width="151"></media:content>
       <media:description>Boghdan, a Ukrainian soldier, firing a rocket-propelled grenade toward Russian forces from a trench in an area of Marinka, in eastern Ukraine.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Ukraine Holds Off Russian Forces in Bakhmut As Fighting Intensifies</title>
       <link>https://www.nytimes.com/2023/03/05/world/europe/ukraine-russia-war-bakhmut.html</link>
@@ -48,6 +50,7 @@
       <media:credit>Daniel Berehulak/The New York Times</media:credit>
       <media:description>Ukrainian soldiers manning an artillery position near Bakhmut, Ukraine, on Thursday.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>In Florida Legislative Session, a Chance for DeSantis to Check Off His Wish List</title>
       <link>https://www.nytimes.com/2023/03/05/us/ron-desantis-florida-legislature.html</link>
@@ -65,6 +68,7 @@
       <media:credit>Scott McIntyre for The New York Times</media:credit>
       <media:description>Gov. Ron DeSantis’s policy wishes will likely soon be granted by the Florida Legislature, giving him a broader platform from which to launch a widely expected 2024 presidential campaign.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>House Committee Budgets Swell as G.O.P. Plans Road Shows Across U.S.</title>
       <link>https://www.nytimes.com/2023/03/05/us/politics/house-republicans-budget-travel-campaign.html</link>
@@ -88,6 +92,7 @@
       <media:credit>Kenny Holston/The New York Times</media:credit>
       <media:description>House Republicans are determined to take their message directly to voters at a time when they are hard-pressed to get anything concrete done on Capitol Hill.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>How A.I. Is Being Used to Detect Cancer That Doctors Miss</title>
       <link>https://www.nytimes.com/2023/03/05/technology/artificial-intelligence-breast-cancer-detection.html</link>
@@ -108,6 +113,7 @@
       <media:credit>Akos Stiller for The New York Times</media:credit>
       <media:description>A patient getting a mammogram at Bács-Kiskun County Hospital in Kecskemét, Hungary. The hospital has been testing A.I. software for breast cancer detection.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Biden, in Selma, Says Voting Rights Are Still ‘Under Assault’</title>
       <link>https://www.nytimes.com/2023/03/05/us/politics/biden-voting-rights-selma.html</link>
@@ -130,6 +136,7 @@
       <media:credit>Doug Mills/The New York Times</media:credit>
       <media:description>President Biden has pushed for two pieces of voting rights legislation while in office, but neither has passed.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Vanquishing the Dutch, Jordan Stolz Creates a New Norse Myth</title>
       <link>https://www.nytimes.com/2023/03/05/sports/olympics/jordan-stolz-speedskating-world-championships.html</link>
@@ -147,6 +154,7 @@
       <media:credit>Peter Dejong/Associated Press</media:credit>
       <media:description>Jordan Stolz of Wisconsin on Sunday celebrated his win in the 1,500-meter race at speedskating’s world championships in the Netherlands. His best finish at the Beijing Olympics, just over a year ago, was 13th.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>The $2 Billion Question of Who You Are at Work</title>
       <link>https://www.nytimes.com/2023/03/05/business/remote-work-personality-tests.html</link>
@@ -164,6 +172,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/business/05personality-testing-cover-illo/05personality-testing-cover-illo-moth.jpg" width="151"></media:content>
       <media:credit>Julian Glander</media:credit>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Are You a Cubicle Cat or a Couch Koala? Test Your Office Personality.</title>
       <link>https://www.nytimes.com/2023/03/05/business/office-work-personality.html</link>
@@ -177,6 +186,7 @@
       <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/des">Psychology and Psychologists</category>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>This Ohio Island Has a Problem: There’s No Ice</title>
       <link>https://www.nytimes.com/2023/03/05/us/put-in-bay-ohio-ice.html</link>
@@ -194,6 +204,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/02/us/05nat-atc-putinbay-fader2/05nat-atc-putinbay-fader2-moth.jpg" width="151"></media:content>
       <media:credit>Madeleine Hordinski for The New York Times</media:credit>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>How to Be a Better Grandfather</title>
       <link>https://www.nytimes.com/2023/03/03/well/family/grandfather-grandparent-how-to.html</link>
@@ -207,6 +218,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/01/multimedia/WELL-GENERATION-GRANPARENT1-fklm/WELL-GENERATION-GRANPARENT1-fklm-moth-v2.jpg" width="151"></media:content>
       <media:credit>Sara Naomi Lewkowicz for The New York Times</media:credit>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Eileen Kelly, Host of the Podcast “Going Mental,” Isn’t the Typical Wellness Influencer</title>
       <link>https://www.nytimes.com/2023/03/03/style/eileen-kelly-going-mental-podcast.html</link>
@@ -227,6 +239,7 @@
       <media:credit>Peter Fisher for The New York Times</media:credit>
       <media:description>“I remember my dad told me in high school, ‘Never put anything on the internet that you don’t want your teacher to see,’” said Eileen Kelly, 27. “And I was like, ‘Well, oops. I put literally everything on the internet.’”</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Larry Hogan: I’m Not Seeking the Republican Nomination for President</title>
       <link>https://www.nytimes.com/2023/03/05/opinion/larry-hogan-president-2024.html</link>
@@ -243,6 +256,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/multimedia/05Politics-1-kpcf/05Politics-1-kpcf-moth.jpg" width="151"></media:content>
       <media:credit>Julia Nikhinson/Associated Press</media:credit>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>The Fight Over ‘Tár’ Shows How Much We Conductors Love to Hate One Another</title>
       <link>https://www.nytimes.com/2023/03/05/opinion/tar-cate-blanchett-conductors-classical-music.html</link>
@@ -262,6 +276,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/opinion/05mauceri/05mauceri-moth.jpg" width="151"></media:content>
       <media:credit>Illustration by Jaya Miceli; photograph by Andrey Burmakin</media:credit>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Take Threats of ‘National Divorce’ Seriously</title>
       <link>https://www.nytimes.com/2023/03/05/opinion/national-divorce-civil-war.html</link>
@@ -277,6 +292,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2023/03/05/opinion/05French-1/05French-1-moth.jpg" width="151"></media:content>
       <media:credit>Buyenlarge/Getty Images</media:credit>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Ford Is Leaving Tesla in the Dust</title>
       <link>https://www.nytimes.com/2023/03/04/opinion/ford-tesla-bluecruise-self-driving-remote-work.html</link>
@@ -294,6 +310,7 @@
       <category domain="http://www.nytimes.com/namespaces/keywords/nyt_org">Twitter</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only</category>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>What to Cook This Week</title>
       <link>https://www.nytimes.com/2023/03/05/dining/what-to-cook-this-week.html</link>
@@ -307,6 +324,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2019/03/13/dining/13purim-A1-ref-copy/12Purim1-moth.jpg" width="151"></media:content>
       <media:credit>Linda Xiao for The New York Times. Food Stylist: Simon Andrews.</media:credit>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Can We Fire Our Employee? His Father Just Died.</title>
       <link>https://www.nytimes.com/2023/03/03/magazine/firing-layoffs-ethics.html</link>
@@ -318,6 +336,7 @@
       <category domain="http://www.nytimes.com/namespaces/keywords/des">Ethics (Personal)</category>
       <category domain="http://www.nytimes.com/namespaces/keywords/des">internal-sub-only-nl</category>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Dominate Me, but Not Like That</title>
       <link>https://www.nytimes.com/2023/03/01/podcasts/modern-love-domination-kink-bdsm.html</link>
@@ -335,6 +354,7 @@
       <media:content height="151" medium="image" url="https://static01.nyt.com/images/2018/06/10/fashion/01modernlove-podcast-image/01modernlove-podcast-image-moth-v3.jpg" width="151"></media:content>
       <media:credit>Brian Rea</media:credit>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Judy Heumann, Who Led the Fight for Disability Rights, Dies at 75</title>
       <link>https://www.nytimes.com/2023/03/05/obituaries/judy-heumann-dead.html</link>
@@ -351,6 +371,7 @@
       <media:credit>John Duricka/Associated Press</media:credit>
       <media:description>Judy Heumann in 1982, with Ed Roberts, director of the California State Department of Rehabilitation. They called attention to the Reagan administration’s cutbacks in funds for programs for the disabled.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>A Second Norfolk Southern Train Derails in Ohio</title>
       <link>https://www.nytimes.com/2023/03/05/us/ohio-train-derailment.html</link>
@@ -368,6 +389,7 @@
       <media:credit>Bill Lackey/Springfield News-Sun</media:credit>
       <media:description>A Norfolk Southern train derailed near Springfield, Ohio, on Saturday with 28 of 212 cars leaving the track, officials said.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Rules to Curb Illicit Dollar Flows Create Unintended Hardships for Some Iraqis</title>
       <link>https://www.nytimes.com/2023/03/03/world/middleeast/iraq-currency-sanctions-economy.html</link>
@@ -388,6 +410,7 @@
       <media:credit>Joao Silva/The New York Times</media:credit>
       <media:description>Waiting outside an authorized currency dealer in Baghdad to exchange Iraqi dinars for U.S. dollars. </media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>In Jon Jones’s Triumphant Return, a Champion Watched From Afar</title>
       <link>https://www.nytimes.com/2023/03/05/sports/ufc-jon-jones-ciryl-gane-ngannou.html</link>
@@ -407,6 +430,7 @@
       <media:credit>Patrick T. Fallon/Agence France-Presse — Getty Images</media:credit>
       <media:description>Jon Jones celebrated after beating Ciryl Gane in Las Vegas on Saturday night for the vacant U.F.C. heavyweight title.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Sahadi’s, the Brooklyn Grocery Store That Feeds Nostalgia</title>
       <link>https://www.nytimes.com/2023/03/01/t-magazine/sahadis-middle-eastern-new-york-grocery.html</link>
@@ -426,6 +450,7 @@
       <media:credit>Chase Middleton</media:credit>
       <media:description>The flagship Sahadi’s grocery store on Brooklyn’s Atlantic Avenue. The business is currently run by the fourth and fifth generations of the Sahadi family. From left: Christine Sahadi Whelan, Pat Whelan, Michael Whelan, Caitlin Whelan and Ron Sahadi.</media:description>
     </item>
+    <!-- Sprinkle some comments throughout -->
     <item>
       <title>Few Wordle Players Use Consistent Starting Words, but When They Do, It’s ADIEU</title>
       <link>https://www.nytimes.com/2022/09/01/crosswords/wordle-starting-words-adieu.html</link>
@@ -443,4 +468,780 @@
       <media:description>Wordle gives players six tries to guess the daily word. Only a small number of people go in with a plan.</media:description>
     </item>
   </channel>
+</rss>
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" version="2.0">
+  <channel>
+	<title>Ars Technica - All content</title>
+	<atom:link href="https://arstechnica.com/feed/" rel="self" type="application/rss+xml"/>
+	<link>https://arstechnica.com</link>
+	<description>All Ars Technica stories</description>
+	<lastBuildDate>Tue, 07 Mar 2023 02:21:58 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0.3</generator>
+
+<image>
+	<url>https://cdn.arstechnica.net/wp-content/uploads/2016/10/cropped-ars-logo-512_480-32x32.png</url>
+	<title>Ars Technica</title>
+	<link>https://arstechnica.com</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Threat actors are using advanced malware to backdoor business-grade routers</title>
+		<link>https://arstechnica.com/?p=1922180</link>
+					<comments>https://arstechnica.com/information-technology/2023/03/threat-actors-are-using-advanced-malware-to-backdoor-business-grade-routers/#comments</comments>
+		
+		<dc:creator><![CDATA[Dan Goodin]]></dc:creator>
+		<pubDate>Tue, 07 Mar 2023 01:09:11 +0000</pubDate>
+				<category><![CDATA[Biz & IT]]></category>
+		<category><![CDATA[email]]></category>
+		<category><![CDATA[hiatusrat]]></category>
+		<category><![CDATA[remote access trojan]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1922180</guid>
+
+					<description><![CDATA[Hiatus hacking campaign has infected roughly 100 Draytek routers.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2022/03/router-800x534.jpeg" alt="Computer cables plugged into a router.">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2022/03/router.jpeg" class="enlarge-link" data-height="667" data-width="1000">Enlarge</a> (credit: <a rel="nofollow" class="caption-link" href="https://www.gettyimages.com/">Getty Images</a>)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Researchers have uncovered advanced malware that’s turning business-grade routers into attacker-controlled listening posts that can sniff email and steal files in an ongoing campaign hitting North and South America and Europe.</p>
+<p>Besides passively capturing IMAP, SMTP, and POP email, the malware also backdoors routers with a remote access Trojan that allows the attackers to download files and run commands of their choice. The backdoor also enables attackers to funnel data from other servers through the router, turning the device into a covert proxy for concealing the true origin of malicious activity.</p>
+<div class="image shortcode-img center large"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/figure5.png"><img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/figure5-640x393.png" srcset="https://cdn.arstechnica.net/wp-content/uploads/2023/03/figure5.png 2x"></a><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/figure5.png" class="caption-link" rel="nofollow"></a> (credit: Black Lotus Labs)</p></div>
+<p>“This type of agent demonstrates that anyone with a router who uses the Internet can potentially be a target—and they can be used as proxy for another campaign—even if the entity that owns the router does not view themselves as an intelligence target,” researchers from security firm Lumen’s Black Lotus Labs <a href="https://blog.lumen.com/new-hiatusrat-router-malware-covertly-spies-on-victims/">wrote</a>. “We suspect that threat actors are going to continue to utilize multiple compromised assets in conjunction with one another to avoid detection.”</p></div><p><a href="https://arstechnica.com/?p=1922180#p3">Read 8 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1922180&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/information-technology/2023/03/threat-actors-are-using-advanced-malware-to-backdoor-business-grade-routers/feed/</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Dealmaster: Microsoft’s Surface laptops and tablets are on sale today</title>
+		<link>https://arstechnica.com/?p=1922048</link>
+					<comments>https://arstechnica.com/gadgets/2023/03/dealmaster-microsofts-surface-laptops-and-tablets-are-on-sale-today/#comments</comments>
+		
+		<dc:creator><![CDATA[Corey Gaskin]]></dc:creator>
+		<pubDate>Tue, 07 Mar 2023 00:41:05 +0000</pubDate>
+				<category><![CDATA[Tech]]></category>
+		<category><![CDATA[Ars Shopping]]></category>
+		<category><![CDATA[dealmaster]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[Surface]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1922048</guid>
+
+					<description><![CDATA[Laptops and tablet-PCs that span a range of use cases are on sale from Microsoft.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2022/11/IMG_0575-800x533.jpeg" alt="Microsoft's Surface Pro 9.">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2022/11/IMG_0575.jpeg" class="enlarge-link" data-height="1707" data-width="2560">Enlarge</a> <span class="sep">/</span> Microsoft's Surface Pro 9. (credit: Andrew Cunningham)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>If you're in the market for a Microsoft Surface computer or tablet, now's a good time to grab some deals on the lineup.</p>
+<h3><a href="https://shop-links.co/cjgNBnSZW5r" target="_blank" rel="noopener" data-orig-url="https://amzn.to/3JgnWMW" data-ml-id="85" data-ml="true" data-xid="fr1678126936877fhe">Microsoft Surface Pro 9</a> 13-inch tablet PC with keyboard cover for <strong>$900</strong> (<del>$1,080</del>) at <a href="https://shop-links.co/cjgNBnSZW5r" target="_blank" rel="noopener">Best Buy</a></h3>
+<p>The <a href="https://shop-links.co/cjgNBnSZW5r" target="_blank" rel="noopener">Surface Pro 9</a> is <a href="https://arstechnica.com/gadgets/2022/11/review-surface-pro-9-makes-some-things-better-without-screwing-most-things-up/" target="_blank" rel="noopener">the best tablet-laptop</a> on the market. It succeeds in mixing the best of the tablet and laptop experience, being a tablet PC that runs Windows 11, uses a backlit detachable keyboard cover, and is optimized for use with a digital pen (the Surface Pen). It's lightweight and has a smaller footprint than most 2-in-1 laptops while packing enough power to edit media and handle light gaming at higher configurations.</p>
+<p>The entry-level Surface Pro 9 (Intel Core i5, 8GB RAM, 128GB SSD) is currently on sale for $900 at Best Buy, down from $1,000, and it comes with a free Surface Keyboard cover which typically runs you an extra $180. That's $300 less than the entry point for <a href="https://amzn.to/3kJDFuc" target="_blank" rel="noopener">Apple's 12.9-inch iPad Pro</a>, which can't run full programs (only apps) and doesn't include its separately sold Magic Keyboard, which costs $350. This 13-inch Surface Pro model has an Intel i5 processor, 8GB of RAM, and 128GB storage, which is great for those who simply want a device to edit documents and surf the web without sacrificing the ability to use full programs.</p></div><p><a href="https://arstechnica.com/?p=1922048#p3">Read 3 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1922048&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/gadgets/2023/03/dealmaster-microsofts-surface-laptops-and-tablets-are-on-sale-today/feed/</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Microsoft aims to reduce “tedious” business tasks with new AI tools</title>
+		<link>https://arstechnica.com/?p=1922073</link>
+					<comments>https://arstechnica.com/information-technology/2023/03/microsoft-brings-chatgpt-style-ai-to-developer-and-analysis-tools/#comments</comments>
+		
+		<dc:creator><![CDATA[Benj Edwards]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 22:40:10 +0000</pubDate>
+				<category><![CDATA[Biz & IT]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[ChatGPT]]></category>
+		<category><![CDATA[clippy]]></category>
+		<category><![CDATA[dynamics 365]]></category>
+		<category><![CDATA[large language models]]></category>
+		<category><![CDATA[machine learning]]></category>
+		<category><![CDATA[microsoft]]></category>
+		<category><![CDATA[Microsoft office]]></category>
+		<category><![CDATA[openai]]></category>
+		<category><![CDATA[Power Platform]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1922073</guid>
+
+					<description><![CDATA[LLM tech comes to Power Platform and Dynamics 365, courtesy of OpenAI partnership.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/ai_robot_worker-800x448.jpg" alt="An AI-generated image of an alien robot worker.">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/ai_robot_worker.jpg" class="enlarge-link" data-height="672" data-width="1200">Enlarge</a> <span class="sep">/</span> An AI-generated illustration of a GPT-powered robot worker. (credit: Ars Technica)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>On Monday, Microsoft <a href="https://cloudblogs.microsoft.com/powerplatform/2023/03/06/build-solutions-faster-with-microsoft-power-platform-and-next-generation-ai/">bundled</a> ChatGPT-style AI technology into its <a href="https://powerplatform.microsoft.com/en-us/">Power Platform</a> developer tool and Dynamics 365, Reuters <a href="https://www.reuters.com/technology/microsoft-expands-chatgpt-integration-more-developer-tools-2023-03-06/">reports</a>. Affected tools include Power Virtual Agent and AI Builder, both of which have been updated to include <a href="https://arstechnica.com/information-technology/2022/11/openai-conquers-rhyming-poetry-with-new-gpt-3-update/">GPT</a> large language model (LLM) technology created by OpenAI.</p>
+
+<p>The move follows the trend among tech giants such as Alphabet and Baidu to incorporate generative AI technology into their offerings—and of course, the <a href="https://arstechnica.com/information-technology/2023/01/openai-and-microsoft-reaffirm-shared-quest-for-powerful-ai-with-new-investment/">multi-billion dollar partnership</a> between OpenAI and Microsoft announced in January.</p>
+<p>Microsoft's Power Platform is a development tool that allows the creation of apps with minimal coding. Its updated <a href="https://powervirtualagents.microsoft.com/en-us/">Power Virtual Agent</a> allows businesses to point an AI bot at a company website or knowledge base and then ask it questions, which it calls <a href="https://learn.microsoft.com/en-us/power-virtual-agents/nlu-boost-conversations?wt.mc_id=power-virtual-agents_inproduct">Conversation Booster</a>. "With the conversation booster feature, you can use the data source that holds your single source of truth across many channels through the chat experience, and the bot responses are filtered and moderated to adhere to Microsoft’s responsible AI principles," <a href="https://cloudblogs.microsoft.com/powerplatform/2023/03/06/build-solutions-faster-with-microsoft-power-platform-and-next-generation-ai/">writes</a> Microsoft in a blog post.</p></div><p><a href="https://arstechnica.com/?p=1922073#p3">Read 6 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1922073&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/information-technology/2023/03/microsoft-brings-chatgpt-style-ai-to-developer-and-analysis-tools/feed/</wfw:commentRss>
+			<slash:comments>43</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Scientists have found Lake Huron wreck of 19th century ship that sank in 1894</title>
+		<link>https://arstechnica.com/?p=1921935</link>
+					<comments>https://arstechnica.com/science/2023/03/scientists-have-found-lake-huron-wreck-of-19th-century-ship-that-sank-in-1894/#comments</comments>
+		
+		<dc:creator><![CDATA[Jennifer Ouellette]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 21:51:48 +0000</pubDate>
+				<category><![CDATA[Gaming & Culture]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[Archaeology]]></category>
+		<category><![CDATA[Ironton]]></category>
+		<category><![CDATA[maritime archaeology]]></category>
+		<category><![CDATA[maritime history]]></category>
+		<category><![CDATA[shipwrecks]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921935</guid>
+
+					<description><![CDATA[The <em>Ironton</em> schooner collided with the freighter <em>Ohio</em>, which was found in 2017.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<div class="video"><div class="wrapper" style="display:block" type="text/html" width="980" height="550" src="https://www.youtube.com/embed/jPpXqfApYw4?start=0&amp;wmode=transparent" frameborder="0" allowfullscreen></div><p class="caption" style="font-size:0.8em"><em>Ironton</em>, a late 19th century shipwreck, has been located in NOAA's Thunder Bay National Marine Sanctuary. </p></div>
+<p>In 1894, a schooner barge called <a href="https://thunderbay.noaa.gov/shipwrecks/ironton.html"><em>Ironton</em></a> collided with a Great Lakes freighter called <em>Ohio</em> in Lake Huron's infamous "Shipwreck Alley." <em>Ohio</em>'s wreck <a href="https://sanctuaries.noaa.gov/news/nov17/finding-history-two-lost-wrecks-discovered-in-thunder-bay-national-marine-sanctuary.html">was found</a> in 2017 by an expedition organized by the National Oceanic and Atmospheric Administration's (NOAA) Thunder Bay National Marine Sanctuary. Now the same team <a href="https://sanctuaries.noaa.gov/news/mar23/ironton-discovery.html">has announced its discovery</a> of the wreck of the 191-foot <em>Ironton</em> nearly 130 years after its sinking, so well-preserved in the frigid waters of the Great Lakes that its three masts are still standing, and its rigging is still attached. Its discovery could help resolve unanswered questions about the ship's final hours.</p>
+<p>Schooner barges like <em>Ironton</em> were part of a fleet that helped transport wheat, coal, corn, lumber, and iron ore across the Great Lakes region, towed by steamers. At 12:30 am on September 26, 1984, <em>Ironton</em> and another schooner, <em>Moonlight</em>, were being towed unladen across Lake Huron by the steamer <em>Charles J. Kershaw</em> when the steamer's engine failed. The weather was rough, and strong winds pushed the two schooners perilously close to the disabled steamer. Fearing a collision, <em>Moonlight</em>'s crew cut <em>Ironton</em>'s tow line, setting <em>Ironton</em> adrift.</p>
+<p>Captain Peter Girard and his crew tried to regain control of the ship, but the wind blew them onto a head-on collision course with the <em>Ohio</em>, which was carrying 1,000 tons of grain. According to the account of surviving crew member William Wooley, it was too dark to spot the <em>Ohio</em> until it was too late, and <em>Ironton</em> struck the steamer with its starboard bow, tearing a 12-foot wide hole in <em>Ohio</em>'s hull.</p></div><p><a href="https://arstechnica.com/?p=1921935#p3">Read 5 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921935&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/science/2023/03/scientists-have-found-lake-huron-wreck-of-19th-century-ship-that-sank-in-1894/feed/</wfw:commentRss>
+			<slash:comments>32</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Twitter revenue, earnings reportedly fell 40% shortly after Musk buyout</title>
+		<link>https://arstechnica.com/?p=1922060</link>
+					<comments>https://arstechnica.com/tech-policy/2023/03/twitter-revenue-fell-40-in-december-amid-advertiser-exodus-report-says/#comments</comments>
+		
+		<dc:creator><![CDATA[Jon Brodkin]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 21:02:22 +0000</pubDate>
+				<category><![CDATA[Biz & IT]]></category>
+		<category><![CDATA[Policy]]></category>
+		<category><![CDATA[Elon Musk]]></category>
+		<category><![CDATA[Twitter]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1922060</guid>
+
+					<description><![CDATA[Twitter doesn't report earnings publicly anymore but told investors of decline.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/musk-twitter-down-arrow-800x510.jpg" alt="Elon Musk's Twitter profile displayed on a phone screen in front of a Twitter logo and a fake stock graph with an arrow pointing down.">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/musk-twitter-down-arrow.jpg" class="enlarge-link" data-height="1593" data-width="2500">Enlarge</a> (credit: Getty Images | NurPhoto )</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Twitter's revenue and adjusted earnings reportedly fell about 40 percent year over year in December 2022 amid an advertiser exodus following Elon Musk's takeover.</p>
+<p>Twitter no longer reports earnings publicly since Musk bought the company and took it private in late October. But Twitter reported the December 2022 revenue and earnings declines in an update to investors, according to "people familiar with the matter" cited in a <a href="https://www.wsj.com/articles/twitters-revenue-adjusted-earnings-fell-about-40-in-month-of-december-ee91f1eb">Wall Street Journal report</a> on Friday.</p>
+<p>Many big companies <a href="https://arstechnica.com/tech-policy/2022/11/twitter-mayhem-staff-cuts-have-advertisers-bailing-on-the-platform/">cut advertising spending</a> on Twitter shortly after Musk's acquisition, largely over concerns about content moderation. Twitter <a href="https://arstechnica.com/tech-policy/2022/12/twitter-dangles-incentives-to-try-to-lure-advertisers-back/">offered special deals to advertisers</a> throughout December 2022, but it wasn't enough to prevent the 40 percent revenue and earnings declines.</p></div><p><a href="https://arstechnica.com/?p=1922060#p3">Read 7 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1922060&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/tech-policy/2023/03/twitter-revenue-fell-40-in-december-amid-advertiser-exodus-report-says/feed/</wfw:commentRss>
+			<slash:comments>142</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>New “Canary” channel will showcase more-experimental, less-stable Windows builds</title>
+		<link>https://arstechnica.com/?p=1922038</link>
+					<comments>https://arstechnica.com/gadgets/2023/03/new-canary-channel-will-showcase-more-experimental-less-stable-windows-builds/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Cunningham]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 19:46:46 +0000</pubDate>
+				<category><![CDATA[Tech]]></category>
+		<category><![CDATA[windows 11]]></category>
+		<category><![CDATA[windows insider]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1922038</guid>
+
+					<description><![CDATA[More frequently released updates means more channels for public beta testing.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2021/08/Screen-Shot-2021-08-30-at-11.34.41-PM-800x450.jpg" alt="A PC running Windows 11.">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2021/08/Screen-Shot-2021-08-30-at-11.34.41-PM.jpg" class="enlarge-link" data-height="1080" data-width="1920">Enlarge</a> <span class="sep">/</span> A PC running Windows 11. (credit: <a rel="nofollow" class="caption-link" href="https://www.microsoft.com/">Microsoft</a>)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Microsoft started its Windows Insider program in 2014 to get public feedback on Windows 10 as it was being developed. Ever since then, the company has continued to provide regularly updated prerelease builds of Windows 10 and Windows 11 to preview and test new features.</p>
+<p>Like many public beta programs, Microsoft has maintained different channels for different users, with periodic tweaks to each channel's name and stated purpose. Today, Microsoft is <a href="https://blogs.windows.com/windows-insider/2023/03/06/whats-coming-for-the-windows-insider-program-in-2023/">renaming one channel and introducing another one</a>. The one formerly known as the "Dev" channel will now be called the "Canary" channel, and it will be where Microsoft tests its least-stable and most-experimental features (including "major changes to the Windows kernel, new APIs, etc.").</p>
+<p>"The builds that will be flighted to the Canary Channel will be “hot off the presses,” flighting very soon after they are built, which means very little validation and documentation will be done before they are offered to Insiders," <a href="https://blogs.windows.com/windows-insider/2023/03/06/whats-coming-for-the-windows-insider-program-in-2023/">writes</a> Windows Insider Program Lead Amanda Langowski.</p></div><p><a href="https://arstechnica.com/?p=1922038#p3">Read 5 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1922038&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/gadgets/2023/03/new-canary-channel-will-showcase-more-experimental-less-stable-windows-builds/feed/</wfw:commentRss>
+			<slash:comments>20</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Twitter API error broke the site today as Musk blames “brittle” platform</title>
+		<link>https://arstechnica.com/?p=1922014</link>
+					<comments>https://arstechnica.com/tech-policy/2023/03/twitter-suffered-embarrassing-api-failure-apparently-breaking-all-links/#comments</comments>
+		
+		<dc:creator><![CDATA[Jon Brodkin]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 18:23:24 +0000</pubDate>
+				<category><![CDATA[Biz & IT]]></category>
+		<category><![CDATA[Policy]]></category>
+		<category><![CDATA[Elon Musk]]></category>
+		<category><![CDATA[Twitter]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1922014</guid>
+
+					<description><![CDATA[Error message: "Your current API plan does not include access to this endpoint."]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2022/11/twitter-logo-broken-800x533.jpg" alt="Twitter logo displayed on a cracked phone screen is seen through broken glass">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2022/11/twitter-logo-broken.jpg" class="enlarge-link" data-height="1334" data-width="2001">Enlarge</a> (credit: Getty Images | NurPhoto )</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Twitter suffered an embarrassing technology failure today that temporarily broke links to outside websites and even to Twitter's own webpages. The problem lasted for about 45 minutes or so.</p>
+<p>In our tests, clicking any link brought up this error message:</p>
+<blockquote><p>{"errors":[{"message":"Your current API plan does not include access to this endpoint, please see https://developer.twitter.com/en/docs/twitter-api for more information","code":467}]}</p></blockquote>
+<p>Clicking that developer link didn't clear anything up while the problem was still happening because it brought up the same API error message. In addition to news articles and other outbound links, the error message appeared when we tried to click Twitter's terms of service, privacy policy, cookie policy, and other similar pages. Some images embedded in tweets were broken, and there were reports of TweetDeck being broken too.</p></div><p><a href="https://arstechnica.com/?p=1922014#p3">Read 6 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1922014&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/tech-policy/2023/03/twitter-suffered-embarrassing-api-failure-apparently-breaking-all-links/feed/</wfw:commentRss>
+			<slash:comments>282</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Thousands scammed by AI voices mimicking loved ones in emergencies</title>
+		<link>https://arstechnica.com/?p=1922001</link>
+					<comments>https://arstechnica.com/tech-policy/2023/03/rising-scams-use-ai-to-mimic-voices-of-loved-ones-in-financial-distress/#comments</comments>
+		
+		<dc:creator><![CDATA[Ashley Belanger]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 18:17:52 +0000</pubDate>
+				<category><![CDATA[Policy]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[fraud]]></category>
+		<category><![CDATA[impersonation]]></category>
+		<category><![CDATA[phone scam]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1922001</guid>
+
+					<description><![CDATA[In 2022, $11 million was stolen through thousands of impostor phone scams.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/GettyImages-1367728606-800x547.jpg" alt="Thousands scammed by AI voices mimicking loved ones in emergencies">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/GettyImages-1367728606.jpg" class="enlarge-link" data-height="1431" data-width="2093">Enlarge</a> (credit: <a rel="nofollow" class="caption-link" href="https://www.gettyimages.com/detail/illustration/conversational-ai-concept-natural-language-royalty-free-illustration/1367728606?phrase=artificial%20intelligence%20voice">ArtemisDiana | iStock / Getty Images Plus</a>)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>AI models designed to closely simulate a person’s voice are making it easier for bad actors to mimic loved ones and scam vulnerable people out of thousands of dollars, <a href="https://www.washingtonpost.com/technology/2023/03/05/ai-voice-scam/">The Washington Post reported</a>.</p>
+<p>Quickly evolving in sophistication, some AI voice-generating software requires just a few sentences <a href="https://arstechnica.com/information-technology/2023/01/microsofts-new-ai-can-simulate-anyones-voice-with-3-seconds-of-audio/">of audio</a> to convincingly produce speech that <a href="https://arstechnica.com/information-technology/2022/09/with-koe-recast-you-can-change-your-voice-as-easily-as-your-clothing/">conveys the sound and emotional tone of a speaker’s voice</a>, while other options need <a href="https://arstechnica.com/information-technology/2023/01/microsofts-new-ai-can-simulate-anyones-voice-with-3-seconds-of-audio/">as little as three seconds</a>. For those targeted—which is often the elderly, the Post reported—it can be increasingly difficult to detect when a voice is inauthentic, even when the emergency circumstances described by scammers seem implausible.</p>
+<p>Tech advancements seemingly make it easier to prey on people’s worst fears and spook victims who told the Post they felt “visceral horror” hearing what sounded like direct pleas from friends or family members in dire need of help. One couple sent $15,000 through a bitcoin terminal to a scammer after believing they had spoken to their son. The AI-generated voice told them that he needed legal fees after being involved in a car accident that killed a US diplomat.</p></div><p><a href="https://arstechnica.com/?p=1922001#p3">Read 10 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1922001&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/tech-policy/2023/03/rising-scams-use-ai-to-mimic-voices-of-loved-ones-in-financial-distress/feed/</wfw:commentRss>
+			<slash:comments>97</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>The small launch industry is brutal—yes, even more than you thought</title>
+		<link>https://arstechnica.com/?p=1921905</link>
+					<comments>https://arstechnica.com/science/2023/03/the-small-launch-industry-is-brutal-yes-even-more-than-you-thought/#comments</comments>
+		
+		<dc:creator><![CDATA[Eric Berger]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 17:58:53 +0000</pubDate>
+				<category><![CDATA[Science]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921905</guid>
+
+					<description><![CDATA["He must be out of money by now, surely?"]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/50624215858_3ae1f4a913_k-800x533.jpg" alt="Astra's Rocket 3.1 takes off on September 11, 2020. It failed 30 seconds into flight.">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/50624215858_3ae1f4a913_k.jpg" class="enlarge-link" data-height="1365" data-width="2048">Enlarge</a> <span class="sep">/</span> Astra's Rocket 3.1 takes off on September 11, 2020. It failed 30 seconds into flight. (credit: Astra/John Kraus)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>One of the most honest moments in a new book, <a href="https://amzn.to/3ZHIDpZ" target="_blank" rel="noopener"><em>When the Heavens Went on Sale</em></a>, comes during a discussion between two aerospace technicians working at the rocket company Astra in December 2018. On a Sunday, Les Martin and Matt Flanagan were watching football inside an RV parked at Astra's facilities near Oakland, California.</p>
+<p>Martin in particular had a lot of experience at launch companies, having worked primarily on test stands for SpaceX, Virgin Galactic, Firefly Space, and now Astra. The two were discussing the challenges of the launch industry and musing about how any company ever made money launching rockets.</p>
+<blockquote><p><strong>Martin</strong>: The challenge is to get there before you run out of money.</p>
+<p><strong>Flanagan</strong>: Right.</p>
+<p><strong>Martin</strong>: Because it doesn't take long. I mean, you raise a little money, you can run through it quick. All the money that is being dumped into this is absurd. There's some charlatans in this business for sure. And what's it all for? I don't see the need for all of it. It doesn't make sense. These VCs made their money in software or whatever. And you know, they just love space. I think a lot of it is it's just cool for them to invest their money in this.</p>
+<p>Even with us, the whole goal is for us to launch daily. I'm either going to be dead in the ground before that happens or I'll be walking down the street with money falling out of my pockets and won't care that they're launching daily.</p></blockquote>
+<p>Spoiler alert: Astra is not launching daily. In fact, after five failures in seven orbital launch attempts of its Rocket 3 vehicle, the company binned that design. Martin and Flanagan have both been gone from Astra for nearly three years. In hindsight, the exchange offers a succinct and largely accurate summary of the US commercial launch industry's wild ride during the last decade or so. Billions have been invested. We have heard wildly optimistic predictions for launch cadences—such as Astra's preposterous goal of launching daily. Behind it all has been a crap-ton of hard work, sacrifice, and effort, with relatively little to show for it.</p></div><p><a href="https://arstechnica.com/?p=1921905#p3">Read 19 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921905&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/science/2023/03/the-small-launch-industry-is-brutal-yes-even-more-than-you-thought/feed/</wfw:commentRss>
+			<slash:comments>66</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Apple’s 15-inch MacBook Air reportedly coming soon, along with new Mac Pro and iMac</title>
+		<link>https://arstechnica.com/?p=1921932</link>
+					<comments>https://arstechnica.com/gadgets/2023/03/report-apple-plans-15-inch-macbook-air-and-mac-pro-for-spring-imac-later-this-year/#comments</comments>
+		
+		<dc:creator><![CDATA[Andrew Cunningham]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 17:11:54 +0000</pubDate>
+				<category><![CDATA[Tech]]></category>
+		<category><![CDATA[15-inch MacBook Air]]></category>
+		<category><![CDATA[iMac]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921932</guid>
+
+					<description><![CDATA[15-inch Air would be Apple's first crack at a cheaper large-screened laptop.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/imac-colors-800x379.png" alt="Apple’s 15-inch MacBook Air reportedly coming soon, along with new Mac Pro and iMac">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/imac-colors.png" class="enlarge-link" data-height="1042" data-width="2200">Enlarge</a> (credit: Apple)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Apple is readying a new batch of Macs to launch "between late spring and summer," according to <a href="https://www.bloomberg.com/news/newsletters/2023-03-05/when-is-apple-aapl-releasing-new-mac-pro-15-inch-macbook-air-new-imac-m3-levgn4yc?cmpid=BBD030523_POWERON&amp;utm_medium=email&amp;utm_source=newsletter&amp;utm_term=230305&amp;utm_campaign=poweron&amp;sref=ExbtjcSG">a report from Bloomberg's Mark Gurman</a>.</p>
+<p>The most significant of the three would be a 15-inch MacBook Air, but a new Mac Pro refresh would complete the Mac's transition from Intel's CPUs and AMD's GPUs to Apple Silicon, and a new 13-inch MacBook Air could also be in the cards. Apple is also said to be planning a new 24-inch iMac that could be the first of its Macs to use its next-generation M3 chip.</p>
+
+<p>The 15-inch MacBook Air would be a new product category for Apple: a larger-screened laptop that costs less than a MacBook Pro. Apple's consumer-focused laptops—from the old PowerPC iBook to the first Intel MacBooks to the current MacBook Air—have all ranged between 11 and 13 inches. The 15- to 17-inch PowerBook and MacBook Pro models always required a step up in CPU and GPU power that drove the price up; the cheapest MacBook Air starts at $999, while the cheapest 16-inch MacBook Pro costs $2,499.</p></div><p><a href="https://arstechnica.com/?p=1921932#p3">Read 6 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921932&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/gadgets/2023/03/report-apple-plans-15-inch-macbook-air-and-mac-pro-for-spring-imac-later-this-year/feed/</wfw:commentRss>
+			<slash:comments>76</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Stealthy UEFI malware bypassing Secure Boot enabled by unpatchable Windows flaw</title>
+		<link>https://arstechnica.com/?p=1921876</link>
+					<comments>https://arstechnica.com/information-technology/2023/03/unkillable-uefi-malware-bypassing-secure-boot-enabled-by-unpatchable-windows-flaw/#comments</comments>
+		
+		<dc:creator><![CDATA[Dan Goodin]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 16:58:35 +0000</pubDate>
+				<category><![CDATA[Biz & IT]]></category>
+		<category><![CDATA[Features]]></category>
+		<category><![CDATA[bootkits]]></category>
+		<category><![CDATA[malware]]></category>
+		<category><![CDATA[uefi]]></category>
+		<category><![CDATA[vulnerabilities]]></category>
+		<category><![CDATA[Windows]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921876</guid>
+
+					<description><![CDATA[BlackLotus represents a major milestone in the continuing evolution of UEFI bootkits.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/black-lotus-malware-800x450.jpg" alt="Stealthy UEFI malware bypassing Secure Boot enabled by unpatchable Windows flaw">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/black-lotus-malware.jpg" class="enlarge-link" data-height="1080" data-width="1920">Enlarge</a> (credit: Aurich Lawson | Getty Images)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Researchers on Wednesday announced a major cybersecurity find—the world’s first-known instance of real-world malware that can hijack a computer’s boot process even when Secure Boot and other advanced protections are enabled and running on fully updated versions of Windows.</p>
+<p>Dubbed BlackLotus, the malware is what’s known as a UEFI bootkit. These sophisticated pieces of malware hijack the UEFI—short for <a href="https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface">Unified Extensible Firmware Interface</a>—the low-level and complex chain of firmware responsible for booting up virtually every modern computer. As the mechanism that bridges a PC’s device firmware with its operating system, the UEFI is an OS in its own right. It’s located in an <a href="https://en.wikipedia.org/wiki/Serial_Peripheral_Interface">SPI</a>-connected flash storage chip soldered onto the computer motherboard, making it difficult to inspect or patch.</p>
+<p>Because the UEFI is the first thing to run when a computer is turned on, it influences the OS, security apps, and all other software that follows. These traits make the UEFI the perfect place to launch malware. When successful, UEFI bootkits disable OS security mechanisms and ensure that a computer remains infected with stealthy malware that runs at the kernel mode or user mode, even after the operating system is reinstalled or a hard drive is replaced.</p></div><p><a href="https://arstechnica.com/?p=1921876#p3">Read 29 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921876&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/information-technology/2023/03/unkillable-uefi-malware-bypassing-secure-boot-enabled-by-unpatchable-windows-flaw/feed/</wfw:commentRss>
+			<slash:comments>131</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Meta Quest Pro sees 33 percent price drop after less than five months</title>
+		<link>https://arstechnica.com/?p=1921939</link>
+					<comments>https://arstechnica.com/gaming/2023/03/metas-absurdly-expensive-quest-pro-is-now-slightly-less-absurdly-expensive/#comments</comments>
+		
+		<dc:creator><![CDATA[Kyle Orland]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 16:06:48 +0000</pubDate>
+				<category><![CDATA[Gaming & Culture]]></category>
+		<category><![CDATA[meta]]></category>
+		<category><![CDATA[quest]]></category>
+		<category><![CDATA[quest 2]]></category>
+		<category><![CDATA[quest pro]]></category>
+		<category><![CDATA[virtual reality]]></category>
+		<category><![CDATA[VR]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921939</guid>
+
+					<description><![CDATA[High-end headset goes from $1,500 to $1,000; Quest 2 gets partial price drop, too.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2022/10/Meta-Quest-Pro_Hero_2-800x450.jpg" alt="The Meta Quest Pro.">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2022/10/Meta-Quest-Pro_Hero_2-scaled.jpg" class="enlarge-link" data-height="1440" data-width="2560">Enlarge</a> <span class="sep">/</span> The Meta Quest Pro. </p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>When we reviewed the Meta Quest Pro headset <a href="https://arstechnica.com/gaming/2022/10/meta-quest-pro-review-for-those-with-more-money-than-sense/">less than five months ago</a>, we balked at the device's $1,500 price point, which represented a whopping 275 percent price premium over the Quest 2 (with much less than a 275 percent increase in quality). Meta is already taking steps to scale back that massive asking price, though; as of Sunday, the headset <a href="https://www.meta.com/blog/quest/price-drop-news/">is now available for $1,000</a> in the US and Canada (a similar price drop will take place March 15 in other Quest Pro countries).</p>
+<p>The price drop puts the Quest Pro in line with other high-end headsets, including the untethered $1,100 HTC Vive XR Elite and <a href="https://arstechnica.com/gaming/2019/05/one-week-with-the-valve-index-a-vr-game-changer-with-a-few-question-marks/">the $1,000 Valve Index</a> (which requires tethering to a gaming PC). That said, for practically the same money, you can get <a href="https://arstechnica.com/gaming/2023/02/psvr2-review-plenty-of-improvements-but-is-it-too-little-too-late/">a $550 PSVR2</a> <em>and</em> the $500 PlayStation 5 to tether it to. And the Quest Pro is still 150 percent more expensive than the cheapest Quest 2, which supports almost all the same software and delivers a sufficient VR experience for most users.</p>
+<p>Speaking of the Quest 2, Meta has also announced a 14 percent price drop for the 256GB version of that headset, from $500 to $430. That price drop brings that expanded-storage option almost all the way back to the $400 that Meta was charging for it <a href="https://arstechnica.com/gaming/2022/07/meta-quest-2-vr-headset-price-jumps-100-to-399-gets-zero-new-features/">before last year's unprecedented price increase</a>.</p></div><p><a href="https://arstechnica.com/?p=1921939#p3">Read 3 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921939&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/gaming/2023/03/metas-absurdly-expensive-quest-pro-is-now-slightly-less-absurdly-expensive/feed/</wfw:commentRss>
+			<slash:comments>53</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Amazon’s big dreams for Alexa fall short</title>
+		<link>https://arstechnica.com/?p=1921940</link>
+					<comments>https://arstechnica.com/gadgets/2023/03/amazons-big-dreams-for-alexa-fall-short/#comments</comments>
+		
+		<dc:creator><![CDATA[Financial Times]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 16:04:39 +0000</pubDate>
+				<category><![CDATA[Tech]]></category>
+		<category><![CDATA[AI]]></category>
+		<category><![CDATA[alexa]]></category>
+		<category><![CDATA[Amazon]]></category>
+		<category><![CDATA[syndication]]></category>
+		<category><![CDATA[voice assistants]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921940</guid>
+
+					<description><![CDATA[Teams working on voice assistant hit hard by the largest cuts in company’s history.
+]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/amazon-alexa-800x534.jpg" alt="Alexa with Amazon logo">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/amazon-alexa.jpg" class="enlarge-link" data-height="683" data-width="1024">Enlarge</a> (credit: <a rel="nofollow" class="caption-link" href="https://www.gettyimages.com/detail/news-photo/the-logo-of-amazon-multinational-technology-company-is-seen-news-photo/1185415382">Anadolu via Getty Images</a>)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>It has been more than a decade since Jeff Bezos excitedly sketched out his vision for Alexa on a whiteboard at Amazon’s headquarters. His voice assistant would help do all manner of tasks, such as shop online, control gadgets, or even read kids a bedtime story.</p>
+<p>But the Amazon founder’s grand vision of a new computing platform controlled by voice has fallen short. As hype in the tech world turns feverishly to generative AI as the “next big thing,” the moment has caused many to ask hard questions of the previous “next big thing”—the much-lauded voice assistants from Amazon, Google, Apple, Microsoft, and others.</p>
+<p>A “grow grow grow” culture described by one former Amazon Alexa marketing executive has now shifted to a more intense focus on how the device can help the e-commerce giant make money.</p></div><p><a href="https://arstechnica.com/?p=1921940#p3">Read 29 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921940&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/gadgets/2023/03/amazons-big-dreams-for-alexa-fall-short/feed/</wfw:commentRss>
+			<slash:comments>113</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Tesla cuts Models S and X prices for the second time in eight weeks</title>
+		<link>https://arstechnica.com/?p=1921920</link>
+					<comments>https://arstechnica.com/cars/2023/03/tesla-cuts-models-s-and-x-prices-for-the-second-time-in-eight-weeks/#comments</comments>
+		
+		<dc:creator><![CDATA[Jonathan M. Gitlin]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 15:17:21 +0000</pubDate>
+				<category><![CDATA[Cars]]></category>
+		<category><![CDATA[Tesla]]></category>
+		<category><![CDATA[tesla model s]]></category>
+		<category><![CDATA[tesla model x]]></category>
+		<category><![CDATA[Tesla price cuts]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921920</guid>
+
+					<description><![CDATA[The EVs were revolutionary at launch but are now aging compared to competitors.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/23e0dda8-2f06-4dde-8ed1-82e003888e05.jpg" alt="Tesla model S">
+      <p class="caption" style="font-size:0.8em">(credit: Tesla)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Tesla is cutting prices for the second time <a href="https://arstechnica.com/cars/2023/01/tesla-drops-prices-up-to-20-percent-in-attempt-to-drive-sales/">in less than eight weeks</a>. <a href="https://www.reuters.com/business/autos-transportation/tesla-cuts-prices-model-y-model-x-variants-us-website-2023-03-06/">Reuters noticed</a> that the automaker has dropped the prices of its more expensive, aging Model S sedan and Model X SUV yet again.</p>
+<p>While these cars were revolutionary at launch in 2012 and 2015, they now face stiff competition from much newer vehicles from the likes of Rivian, Lucid, Mercedes, Porsche, and BMW. As a result, Model S and Model X sales combined <a href="https://arstechnica.com/cars/2023/01/tesla-misses-2022-q4-target-share-price-drops-further/">represented only 5 percent</a> of Tesla's global sales in 2022.</p>
+<p>In 2022, a dual-motor all-wheel-drive Tesla Model S went for $104,990. In January, Tesla chopped about 10 percent off the price, dropping it to $94,990. Today, it's another $5,000 cheaper at $89,990.</p></div><p><a href="https://arstechnica.com/?p=1921920#p3">Read 3 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921920&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/cars/2023/03/tesla-cuts-models-s-and-x-prices-for-the-second-time-in-eight-weeks/feed/</wfw:commentRss>
+			<slash:comments>325</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Tesla is recalling 3,470 Model Y crossovers for second-row seat fix</title>
+		<link>https://arstechnica.com/?p=1921912</link>
+					<comments>https://arstechnica.com/cars/2023/03/tesla-is-recalling-3470-model-y-crossovers-for-second-row-seat-fix/#comments</comments>
+		
+		<dc:creator><![CDATA[Jonathan M. Gitlin]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 14:55:24 +0000</pubDate>
+				<category><![CDATA[Cars]]></category>
+		<category><![CDATA[safety recall]]></category>
+		<category><![CDATA[Tesla]]></category>
+		<category><![CDATA[Tesla Model Y]]></category>
+		<category><![CDATA[Tesla recall]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921912</guid>
+
+					<description><![CDATA[This time the recall requires physical inspection, not an OTA software update.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/b8df73be-1338-4da2-bf31-5c673f57d369.jpg" alt="Tesla Model Y middle seats">
+      <p class="caption" style="font-size:0.8em">Mistorqued bolts may need to be fixed in some Model Y second rows. (credit: Tesla)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p><a href="https://arstechnica.com/cars/2023/03/rivian-recalls-nearly-13000-electric-trucks-and-suvs-for-seatbelt-fix/">Rivian</a> was not the only electric vehicle startup to feature in my weekly recall email from the National Highway Traffic Safety Administration this morning. <a href="https://www.nhtsa.gov/recalls?nhtsaId=23V095">Electra Mecchanica</a> and <a href="https://www.nhtsa.gov/recalls?nhtsaId=23V114">Lordstown</a> are recalling a small number of EVs, but, more significantly, <a href="https://static.nhtsa.gov/odi/rcl/2023/RCLRPT-23V130-5860.PDF">Tesla has issued yet another recall</a>, and this time there's <a href="https://arstechnica.com/cars/2023/02/tesla-to-recall-362758-cars-because-full-self-driving-beta-is-dangerous/">no software patch</a> that can remedy the problem; affected cars have to be physically inspected.</p>
+<p>Tesla is recalling 3,470 Model Y crossovers built between May 2022 and February 2023 to check that the bolts that secure the frame of the second-row seats are properly torqued. Those that aren't could potentially increase the risk of injury to occupants of the second row during a crash.</p>
+<p>For owners worried their cars may be affected, Tesla says that a "second-row seat back frame that has this condition may not fold properly or may be loose and rattle during normal vehicle operation."</p></div><p><a href="https://arstechnica.com/?p=1921912#p3">Read 3 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921912&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/cars/2023/03/tesla-is-recalling-3470-model-y-crossovers-for-second-row-seat-fix/feed/</wfw:commentRss>
+			<slash:comments>46</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Rivian recalls nearly 13,000 electric trucks and SUVs for seatbelt fix</title>
+		<link>https://arstechnica.com/?p=1921906</link>
+					<comments>https://arstechnica.com/cars/2023/03/rivian-recalls-nearly-13000-electric-trucks-and-suvs-for-seatbelt-fix/#comments</comments>
+		
+		<dc:creator><![CDATA[Jonathan M. Gitlin]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 14:24:25 +0000</pubDate>
+				<category><![CDATA[Cars]]></category>
+		<category><![CDATA[recall]]></category>
+		<category><![CDATA[Rivian]]></category>
+		<category><![CDATA[safety recall]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921906</guid>
+
+					<description><![CDATA[A missized sensor can stop the passenger airbag from working properly.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/Rivian-SUVs-1-800x600.jpg" alt="A pair of Rivian SUVs next to a motel">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/Rivian-SUVs-1-scaled.jpg" class="enlarge-link" data-height="1920" data-width="2560">Enlarge</a> <span class="sep">/</span> The recall affects both the Rivian R1S (pictured) and the R1T pickup truck. (credit: Jonathan Gitlin)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Rivian is in the <a href="https://static.nhtsa.gov/odi/rcl/2023/RCLRPT-23V109-4124.PDF">process of recalling</a> nearly 13,000 <a href="https://arstechnica.com/cars/2021/09/rivians-67-500-314-mile-electric-adventure-truck-put-to-the-test/">R1T trucks</a> and <a href="https://arstechnica.com/cars/2022/07/rivians-r1s-is-an-electric-suv-for-those-with-an-adventurous-lifestyle/">R1S SUVs</a> due to a potential seatbelt problem. It believes that in some vehicles, a sensor within the seatbelt system is missized or "dimensionally out of tolerance," which could prevent the automatic locking retractor from working properly. That, in turn, could lead the front passenger airbag to believe the seat was unoccupied during a crash and fail to trigger.</p>
+<p>Last July, Rivian and its supplier were investigating a vehicle displaying a message that the front passenger airbag was off despite having a passenger in that seat. Rivian and its supplier, Autoliv, worked on the problem until January, collecting more potentially suspect parts from other Rivian EVs. In February, the startup determined that vehicles with the suspect parts would not be compliant with federal safety regulations and initiated the recall.</p>
+<p>Unlike many problems we see on new EVs, this one is not the sort that can just be fixed with a software patch. Although Rivian thinks that only 1 percent of the 12,716 affected cars have a defective part, it will inspect and, if necessary, replace the passenger seatbelt components in those affected vehicles.</p></div><p><a href="https://arstechnica.com/?p=1921906#p3">Read 2 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921906&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/cars/2023/03/rivian-recalls-nearly-13000-electric-trucks-and-suvs-for-seatbelt-fix/feed/</wfw:commentRss>
+			<slash:comments>47</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>The gold rush for the next round of military launch contracts has started</title>
+		<link>https://arstechnica.com/?p=1920109</link>
+					<comments>https://arstechnica.com/science/2023/03/the-gold-rush-for-the-next-round-of-military-launch-contracts-has-started/#comments</comments>
+		
+		<dc:creator><![CDATA[Eric Berger]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 11:45:21 +0000</pubDate>
+				<category><![CDATA[Features]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[NSSL]]></category>
+		<category><![CDATA[space]]></category>
+		<category><![CDATA[space force]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1920109</guid>
+
+					<description><![CDATA[Everything you've ever wanted to know about military launch procurement. ]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/52635650359_aa48480e41_k-800x533.jpg" alt="A Falcon Heavy rocket launches the USSF-67 mission for the US Space Force in January 2023.">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/52635650359_aa48480e41_k.jpg" class="enlarge-link" data-height="1365" data-width="2048">Enlarge</a> <span class="sep">/</span> A Falcon Heavy rocket launches the USSF-67 mission for the US Space Force in January 2023. (credit: SpaceX)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>The US military recently released a rather mundane-sounding <a href="https://sam.gov/opp/2587e0f4a44941e8a96c67c0710efb68/view#20230221">document</a> titled "National Security Space Launch Phase 3 DRAFT Request for Proposals #1." That may be a mouthful of jargon, but it's still a rather consequential document. Effectively, its release is the starting gun for the next round of launch contracts for US spy satellites, secure communications satellites, and more.</p>
+<p>There is a pile of money at stake. Up for grabs are launch contracts worth billions of dollars—substantially more than $10 billion—as the military seeks to secure launch deals for the late 2020s and early 2030s. The document itself is pretty bland, but in a follow-up teleconference with reporters, two US colonels overseeing space acquisition, Douglas Pentecost and Chad Melone, provided a trove of information.</p>
+<p>Wait! I know this sounds dreadfully boring, but it's really not. Based on the document and this hour-long call, it's possible to get a good sense of where the US military believes the country's launch industry is headed. And that matters because in many cases, the contracts offered by the military can make or break launch companies. For example, after the last round of bidding for national security launches ended, Northrop Grumman <a href="https://spaceflightnow.com/2020/09/14/northrop-grumman-ends-omega-rocket-program-after-losing-military-launch-competition/">ended its efforts</a> to develop the Omega rocket.</p></div><p><a href="https://arstechnica.com/?p=1920109#p3">Read 44 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1920109&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/science/2023/03/the-gold-rush-for-the-next-round-of-military-launch-contracts-has-started/feed/</wfw:commentRss>
+			<slash:comments>128</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>HBO’s The Last of Us episode 8 ruins one of the game’s best villains</title>
+		<link>https://arstechnica.com/?p=1921436</link>
+					<comments>https://arstechnica.com/gaming/2023/03/hbos-the-last-of-us-episode-8-ruins-one-of-the-games-best-villains/#comments</comments>
+		
+		<dc:creator><![CDATA[Kyle Orland]]></dc:creator>
+		<pubDate>Mon, 06 Mar 2023 03:00:35 +0000</pubDate>
+				<category><![CDATA[Gaming & Culture]]></category>
+		<category><![CDATA[HBO]]></category>
+		<category><![CDATA[the last of us]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921436</guid>
+
+					<description><![CDATA[Joel and Ellie barrel through a grisly speedbump on the way to the finale.]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd-800x533.jpg" alt="He looks nice...">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd.jpg" class="enlarge-link" data-height="1280" data-width="1920">Enlarge</a> <span class="sep">/</span> He looks nice... (credit: HBO)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>New episodes of <em>The Last of Us</em> are premiering on HBO every Sunday night, and Ars' Kyle Orland (who's played the games) and Andrew Cunningham (who hasn't) <a href="https://arstechnica.com/series/hbos-the-last-of-us-season-one/">will be talking about them here every Monday morning</a>. While these recaps don't delve into every single plot point of the episode, there are obviously <strong>heavy spoilers</strong> contained within, so go watch the episode first if you want to go in fresh.</p>
+<div class="convo kyle"><strong>Kyle</strong>: Up until now, for the most part, I think the <em>Last of Us</em> TV show has done a good job fleshing out the game's story without really ruining the key moments. That didn't really happen with this episode.
+<p>In the games, we get a quick cut from <a href="https://arstechnica.com/gaming/2023/02/hope-and-doubt-collide-in-an-eventful-episode-6-of-the-last-of-us/">the events of episode 6</a> to Ellie hunting wild game in the snow. As we take direct control of Ellie for the first time, we don't even know if the unseen Joel is alive or dead.</p>
+<p>We also don't know anything about the mild-mannered stranger named David that Ellie stumbles upon while hunting. He even seems like a plausible Joel replacement at points during the early, amenable parts of their in-game team-up.</p>
+<p>Seeing everything from Ellie's perspective really heightens the tension and mystery of David's whole arc, and I feel like the show kind of ruined that pacing here.</p>
+</div>
+<div class="convo andrew-c"><strong>Andrew</strong>: Even with no knowledge of how this plays out in the game, I agree that this episode felt super rushed and uneven in a way that makes me more frustrated about <a href="https://arstechnica.com/gaming/2023/02/where-a-kid-can-be-a-kid-recapping-episode-7-of-hbos-the-last-of-us/">last week’s flashback episode</a>. Not that last week’s episode was bad at all! But this arc clearly wanted another episode to breathe, like <a href="https://arstechnica.com/gaming/2023/02/the-last-of-us-episode-5-asks-what-if-prestige-tv-shows-had-boss-monsters/">the Kansas City arc got</a>. Instead we have to cram all this stuff into a single hour.
+<p>David suffers the most. It’s like the show needed to stuff him full of red flags to make sure that viewers really didn’t like him or feel bad for him, but it also makes him into a cartoon character in a show where most of the antagonists have already been a little flat.</p>
+</div>
+<div class="image shortcode-img center large"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd_0.jpg"><img alt="We are in need of a more interesting characterization..." src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd_0-640x427.jpg" srcset="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd_0-1280x853.jpg 2x"></a><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd_0.jpg" class="caption-link" rel="nofollow">We are in need of a more interesting characterization...</a> (credit: HBO)</p></div>
+<div class="convo kyle"><strong>Kyle</strong>: The whole preacher subplot is completely new to the show, as far as I can tell, as is David's baffling vision of a violent teenager as a partner in leading the flock. I can see why they wanted to give his turn to cannibalism some grounding, but yeah, it's another situation where the red flags are a little too overt.</div>
+<div class="convo andrew-c"><strong>Andrew</strong>: Yeah, in a TV show, there are some places where I am more willing and able to suspend disbelief—like when Joel goes from laid-out-on-his-back-delirious-with-infection to full-on Rambo-killing-spree in the space of 45 minutes. A more realistic recovery would take a long time to show and to watch! Bo-ring!
+<p>But I did not believe for even one fraction of one second that Ellie was in any danger of joining up with this creepy fundamentalist/mushroom cultist/child-hitter/cannibal guy, and it makes it weirder that the last sequence between them is framed as this big emotional showdown.</p>
+<p>And also... this community had a lot of other people in it? Where did they go? A more organic and satisfying version might have had David’s own community seeing what a creep he is and turning on him, rather than a big dramatic one-on-one confrontation between David and Ellie in the world’s most flammable restaurant. It doesn’t sound like that’s how it goes in the games, but it also sounds like the character is just handled fundamentally differently.</p>
+</div>
+<div class="image shortcode-img center large"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd-bella-ramsey.jpg"><img alt="Just hanging out..." src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd-bella-ramsey-640x427.jpg" srcset="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd-bella-ramsey-1280x853.jpg 2x"></a><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/scott-shepherd-bella-ramsey.jpg" class="caption-link" rel="nofollow">Just hanging out...</a> (credit: HBO)</p></div>
+<div class="convo kyle"><strong>Kyle</strong>: Not getting any resolution to what happens to this community of people that have now had their cult leader violently killed does seem like a pretty big dangling plot thread.
+<p>Here's my main question for someone going in fresh: Did you ever feel like David was potentially just a nice guy and someone that Ellie could justifiably trust and/or let down her guard in front of? I feel like the game went to great pains to push the player in that direction for a while before the heel turn, and it just didn't work for me here. Then again, I knew some of David's dark secrets from the get-go...</p>
+</div>
+<div class="convo andrew-c"><strong>Andrew</strong>: I don’t think the audience is meant to believe that David could be a good guy at any point. The scene where you meet him is too full of meaningful looks and ominous pauses, and obvious fear on the part of the other people in the community.
+<p>The first scene where David and Ellie meet, on the other hand—I could see it! David (played by Scott Shepherd, a fairly prolific character actor who has one of those “what have I seen him in?” faces) has a certain reassuring avuncular charisma to him. Unfortunately, we’ve already seen too many Bad Guy markers from him, even before you find out that he’s been reading <a href="https://twilightzone.fandom.com/wiki/To_Serve_Man">To Serve Man</a>.</p>
+</div>
+<div class="image shortcode-img center large"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/bella-ramsey_16.jpg"><img alt="That gun looks a bit heavy, Ellie..." src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/bella-ramsey_16-640x427.jpg" srcset="https://cdn.arstechnica.net/wp-content/uploads/2023/03/bella-ramsey_16-1280x853.jpg 2x"></a><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/bella-ramsey_16.jpg" class="caption-link" rel="nofollow">That gun looks a bit heavy, Ellie...</a> (credit: HBO)</p></div>
+<div class="convo kyle"><strong>Kyle</strong>: Where this episode does follow the games pretty closely is in leaning more toward the "torture porn" side of the equation than any part of the story so far. Not that there hasn't been plenty of violence previously, but seeing Joel torture and kill two prisoners without any remorse and Ellie's own almost-chopping-and-revenge really takes it to a new level. It also makes you look at both characters in a disturbing new light, I think.</div>
+<div class="convo andrew-c"><strong>Andrew</strong>: Joel is clearly being driven both by his dawning acceptance of Ellie-as-daughter figure (his “baby girl” when they finally meet back up is extremely loaded) and his established trust-no-one views of life post-apocalypse. But that doesn’t make it any less uncomfortable to watch. This is a dated reference, but I was reminded of Kiefer Sutherland’s Jack Bauer, from the War On Terror-era show <em>24</em>. Sure, he tortures people, and sure, he seems just a hair too enthusiastic about it, but he gets results!!
+<p>And you’re right that Ellie’s butchering of David at the end of the episode goes on just a bit too long for comfort. I’m just not sure what to make of it. Surely Ellie has been traumatized as much as she could possibly need to be for story purposes. It’s not as though David was close enough to her to really betray her. Between the two of them, Joel and Ellie do enough violence this episode to sour their tearful reunion a bit. Which is not really where I wanted to be heading into the season finale of a show I have otherwise mostly liked.</p>
+</div>
+<div class="convo kyle"><strong>Kyle</strong>: There's definitely a certain "War on Terror" mindset that creeps into the narrative from decades past, for sure.</div>
+<div class="image shortcode-img center large"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/bella-ramsey_18.jpg"><img alt="Who doesn't love a good stealth section?" src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/bella-ramsey_18-640x427.jpg" srcset="https://cdn.arstechnica.net/wp-content/uploads/2023/03/bella-ramsey_18-1280x853.jpg 2x"></a><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/bella-ramsey_18.jpg" class="caption-link" rel="nofollow">Who doesn't love a good stealth section?</a> (credit: HBO)</p></div>
+<div class="convo andrew-c"><strong>Andrew</strong>: That was where society ended, something the show occasionally references but doesn’t pick at too much. We’ve had one 9/11 reference and one Pearl Jam album with a lot of anti-Bush stuff on it, so presumably the US had invaded Iraq six months before society fell apart.</div>
+<div class="convo kyle"><strong>Kyle</strong>: Now I'm wondering if Osama bin Laden's cave hideout was relatively safe from the Infected. Depends how much cordyceps-infused flour they imported, I guess?</div>
+<div class="convo andrew-c"><strong>Andrew</strong>: It does kind of make me want to see more about how the world outside the US is handling the apocalypse. Maybe we would have, back in the old days of 22-episode seasons.</div>
+<div class="convo kyle"><strong>Kyle</strong>: Which gets into what I think has become a pretty big pacing problem with the show. In the games, new characters would pop in and stick around for a while, and you never knew precisely when they would pop out again (usually with a violent death). Here, the structure means the pattern of "here's a new character, they will be dead by the end of this episode (or maybe the next one)" has become way too obvious...
+<p>All that death has been building toward the big finale, though. Without getting too spoilery, I wonder if you even remember what Joel and Ellie are trekking for/toward at this point, and if you have any big predictions for the final episode?</p>
+</div>
+<div class="image shortcode-img center large"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/troy-baker_0.jpg"><img alt="Oh yeah, Troy Baker is here, too." src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/troy-baker_0-640x427.jpg" srcset="https://cdn.arstechnica.net/wp-content/uploads/2023/03/troy-baker_0-1280x853.jpg 2x"></a><p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/troy-baker_0.jpg" class="caption-link" rel="nofollow">Oh yeah, Troy Baker is here, too.</a> (credit: HBO)</p></div>
+<div class="convo andrew-c"><strong>Andrew</strong>: They still have to get her magic blood out to some Firefly-affiliated scientists! The only thing I’m confident enough to assert is that they’re finally going to get where they’re going, and the scientists are going to end up being weirdo creeps who aren’t totally on the level.
+<p>I would love to be pleasantly surprised! Maybe the show has settled into this predictable rhythm to make it especially mind-blowing next week when all the scientists end up being super chill and professional.</p>
+</div>
+<div class="convo kyle"><strong>Kyle</strong>: Not to set your expectations too high, but the conclusion of <em>The Last of Us Part One</em> is what raises it to <a href="https://arstechnica.com/gaming/2013/12/the-20-best-and-three-most-disappointing-video-games-of-2013/">the level of "All Time Great" game</a> for me, so I'm looking forward to seeing this team of actors and producers tackle it.</div>
+<div class="convo andrew-c"><strong>Andrew</strong>: It’s too late, you’ve set my expectations too high! If I don’t like the finale, it’ll be all your fault.</div>
+
+</div><p><a href="https://arstechnica.com/?p=1921436">Read on Ars Technica</a> | <a href="https://arstechnica.com/?p=1921436&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/gaming/2023/03/hbos-the-last-of-us-episode-8-ruins-one-of-the-games-best-villains/feed/</wfw:commentRss>
+			<slash:comments>130</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>As Kenya’s crops fail, a fight over GMOs rages</title>
+		<link>https://arstechnica.com/?p=1921888</link>
+					<comments>https://arstechnica.com/science/2023/03/as-kenyas-crops-fail-a-fight-over-gmo-rages/#comments</comments>
+		
+		<dc:creator><![CDATA[WIRED]]></dc:creator>
+		<pubDate>Sun, 05 Mar 2023 12:39:22 +0000</pubDate>
+				<category><![CDATA[Policy]]></category>
+		<category><![CDATA[Science]]></category>
+		<category><![CDATA[africa]]></category>
+		<category><![CDATA[agriculture]]></category>
+		<category><![CDATA[climate change]]></category>
+		<category><![CDATA[GMOs]]></category>
+		<category><![CDATA[la niña]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921888</guid>
+
+					<description><![CDATA[Faced with extreme drought, Kenya’s president OK'd a controversial new crop.
+]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/maize-800x533.jpg" alt="maize plant">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/maize.jpg" class="enlarge-link" data-height="1493" data-width="2240">Enlarge</a> (credit: James Wakibia/Getty Images)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Kenya is in the middle of its worst drought <a href="https://news.un.org/en/story/2022/12/1132047">in 40 years</a>. In the parched north of the country, rivers are running dry and millions of livestock have perished due to lack of food. Around 4.4 million Kenyans don’t have enough to eat, and the situation will worsen if the <a href="https://reliefweb.int/report/ethiopia/another-poor-rainy-season-forecast-drought-hit-horn-africa">coming rainy season</a> fails like the previous five. “I’ve never seen it so bad. There’s nothing in the farms, the drought is too harsh,” says Daniel Magondo, a cotton and maize farmer in central Kenya.</p>
+<p>The record-breaking drought is forcing Kenya to confront a controversial topic: whether the country should grow genetically modified (GM) crops. These are plants that have had genes from another organism inserted into their DNA to give them a new trait, such as disease or drought resistance. Although GM crops are completely safe to eat and are <a href="https://royalsociety.org/topics-policy/projects/gm-plants/what-gm-crops-are-currently-being-grown-and-where/">widely grown</a> in the US, Canada, Brazil, and India, governments in many parts of the world, including Europe and East Africa, have pushed back against them.</p>
+<p></p></div><p><a href="https://arstechnica.com/?p=1921888#p3">Read 11 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921888&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/science/2023/03/as-kenyas-crops-fail-a-fight-over-gmo-rages/feed/</wfw:commentRss>
+			<slash:comments>208</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>The sketchy plan to build a Russian Android phone</title>
+		<link>https://arstechnica.com/?p=1921838</link>
+					<comments>https://arstechnica.com/gadgets/2023/03/the-sketchy-plan-to-build-a-russian-android-phone/#comments</comments>
+		
+		<dc:creator><![CDATA[WIRED]]></dc:creator>
+		<pubDate>Sat, 04 Mar 2023 12:50:36 +0000</pubDate>
+				<category><![CDATA[Tech]]></category>
+		<category><![CDATA[android]]></category>
+		<category><![CDATA[Invasion of Ukraine]]></category>
+		<category><![CDATA[russia]]></category>
+		<category><![CDATA[sanctions]]></category>
+		<category><![CDATA[syndication]]></category>
+		<guid isPermaLink="false">https://arstechnica.com/?p=1921838</guid>
+
+					<description><![CDATA[A Russian tech giant plans to launch new Android phones and tablets. 
+
+]]></description>
+										<content:encoded><![CDATA[<div id="rss-wrap">
+<figure class="intro-image intro-left">
+  <img src="https://cdn.arstechnica.net/wp-content/uploads/2023/03/phone-blurred-800x533.jpg" alt="Blurry picture of a phone">
+      <p class="caption" style="font-size:0.8em"><a href="https://cdn.arstechnica.net/wp-content/uploads/2023/03/phone-blurred.jpg" class="enlarge-link" data-height="1493" data-width="2240">Enlarge</a> (credit: Jeffrey Coolidge/Getty Images)</p>  </figure>
+
+
+
+
+
+
+<div><a name="page-1"></a></div>
+<p>Since the invasion of Ukraine one year ago, Russia has faced an exodus of tech companies and services. This includes the exit of Samsung and Apple, two of the world’s most popular smartphone brands. In response, the country has doubled down on its efforts to attain technological self-sufficiency, including creating a new Android smartphone.</p>
+<p>The handset, which does not yet have a name, will be built by the National Computer Corporation (NCC), one of Russia’s largest IT companies, with an ambitious goal to sell 100,000 smartphones and tablets by the end of 2023. Alexander Kalinin, the founder of NCC, <a href="https://www.cnews.ru/news/top/2023-02-28_v_rossii_sozdayut_otechestvennye">told</a> local media on Monday that he aims to invest 10 billion rubles ($132.9 million) in the project and hopes to capture 10 percent of the consumer market by 2026.</p>
+<p>The news comes just days after the US Department of Commerce <a href="https://www.bis.doc.gov/index.php/documents/regulation-docs/420-part-746-embargoes-and-other-special-controls/file">banned</a> exports to Russia of phones and other electronics that cost more than $300. Experts say, however, that a Russian smartphone will have a hard time beating inexpensive competitors from China, and it may encounter problems with using Google’s Android.</p></div><p><a href="https://arstechnica.com/?p=1921838#p3">Read 21 remaining paragraphs</a> | <a href="https://arstechnica.com/?p=1921838&comments=1">Comments</a></p>]]></content:encoded>
+					
+					<wfw:commentRss>https://arstechnica.com/gadgets/2023/03/the-sketchy-plan-to-build-a-russian-android-phone/feed/</wfw:commentRss>
+			<slash:comments>194</slash:comments>
+		
+		
+			</item>
+	</channel>
 </rss>
