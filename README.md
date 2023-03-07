@@ -1,13 +1,13 @@
-# grab-xml-html
+# grab-xml
 
-XPath for tXml. It's very rudimentary!
+A simple XML parser.
 
 ## Installation
 
-Use `npm` (or `yarn`, or `pnpm`) to add grab-xml-html to your project:
+Use `npm` (or `yarn`, or `pnpm`) to add grab-xml to your project:
 
 ```bash
-npm install grab-xml-html
+npm install grab-xml
 ```
 
-grab-xml-html contains CommonJS and ESM modules for use in Node and the browser.
+grab-xml contains CommonJS and ESM modules for use in Node and the browser.

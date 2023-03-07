@@ -1,7 +1,7 @@
 {
-  "name": "grab-xml-html",
+  "name": "grab-xml",
   "version": "1.0.0",
-  "description": "A simple XML and HTML parser",
+  "description": "A simple XML parser",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "browser": "dist/index.mjs",
