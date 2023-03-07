@@ -13,7 +13,10 @@ Replace predefined entities ✓
 Options ✓
 Trim whitespace ✓
 Self-closing HTML elements ✓
-grabHtml function
+grabHtml function ✓
 Namespaces ✓
 Streams
 Perf tests ✓
+
+Do I need to do something about this?
+<https://html.spec.whatwg.org/multipage/syntax.html#optional-tags>

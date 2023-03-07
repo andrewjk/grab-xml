@@ -65,7 +65,7 @@ const closeSquareCode = "]".charCodeAt(0);
  * @param content The XML content to parse
  * @returns A root element node with the XML's elements as children
  */
-export default function grabXml(content: string, options: Options = {}) {
+export default function grabXml(content: string, options: Options = {}): XmlNode {
   const root: XmlNode = {
     type: XmlNodeType.ELEMENT,
     parent: null,
