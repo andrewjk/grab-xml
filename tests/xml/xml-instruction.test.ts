@@ -37,12 +37,11 @@ test("XML with prolog instruction", () => {
   <?php do some php stuff?>
 `;
 
-  const doc = grabXml(xml);
-  sanitizeNode(doc);
+  const xmlDoc = grabXml(xml);
+  const doc = sanitizeNode(xmlDoc);
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tag: "#root",
     children: [
       {
         type: XmlNodeType.INSTRUCTION,
@@ -61,8 +60,8 @@ test("XML with prolog instruction", () => {
 
   // Also try it without spaces between elements
   const xml2 = xml.replace(/\>\s+\</g, "><");
-  const doc2 = grabXml(xml2);
-  sanitizeNode(doc2);
+  const xmlDoc2 = grabXml(xml2);
+  const doc2 = sanitizeNode(xmlDoc2);
   assert.equal(doc2, expected);
 });
 

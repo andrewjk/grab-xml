@@ -1,4 +1,4 @@
-import XmlNode from "../types/XmlNode";
+import XmlNode from "./XmlNode";
 import grabXml from "./grabXml";
 
 export default function grabHtml(content: string): XmlNode {

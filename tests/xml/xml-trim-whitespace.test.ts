@@ -14,12 +14,11 @@ test("XML trimming whitespace", () => {
 `;
 
   const options = { trimWhitespace: true };
-  const doc = grabXml(xml, options);
-  sanitizeNode(doc, false);
+  const xmlDoc = grabXml(xml, options);
+  const doc = sanitizeNode(xmlDoc, false);
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,

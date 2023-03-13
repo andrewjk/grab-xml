@@ -38,12 +38,11 @@ test("HTML document", () => {
 </html>
 `;
 
-  const doc = grabHtml(html);
-  sanitizeNode(doc);
+  const htmlDoc = grabHtml(html);
+  const doc = sanitizeNode(htmlDoc);
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tag: "#root",
     children: [
       {
         type: XmlNodeType.INSTRUCTION,

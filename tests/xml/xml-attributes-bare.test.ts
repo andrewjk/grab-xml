@@ -7,12 +7,11 @@ import sanitizeNode from "../sanitizeNode";
 test("XML with bare attributes", () => {
   const xml = `<xml attribute=value attribute2=value2 />`;
 
-  const doc = grabXml(xml);
-  sanitizeNode(doc);
+  const xmlDoc = grabXml(xml);
+  const doc = sanitizeNode(xmlDoc);
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,

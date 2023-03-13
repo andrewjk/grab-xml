@@ -13,12 +13,11 @@ test("XML with void elements", () => {
 `;
 
   const options = { voidElements: ["element"] };
-  const doc = grabXml(xml, options);
-  sanitizeNode(doc);
+  const xmlDoc = grabXml(xml, options);
+  const doc = sanitizeNode(xmlDoc);
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,
@@ -41,8 +40,8 @@ test("XML with void elements", () => {
 
   // Also try it without spaces between elements
   const xml2 = xml.replace(/\>\s+\</g, "><");
-  const doc2 = grabXml(xml2, options);
-  sanitizeNode(doc2);
+  const xmlDoc2 = grabXml(xml2, options);
+  const doc2 = sanitizeNode(xmlDoc2);
   assert.equal(doc2, expected);
 });
 

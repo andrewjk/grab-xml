@@ -1,54 +1,33 @@
-import XmlNode from "../types/XmlNode";
+import XmlNode from "../src/XmlNode";
 import XmlNodeType from "../types/XmlNodeType";
 
 export default function sanitizeNode(node: XmlNode, trim = true) {
-  // Delete parents (to remove circular references)
-  delete node.parent;
+  const result: Record<string, any> = {};
 
-  // Remove empty tags
-  if (!node.tag) {
-    delete node.tag;
+  result.type = node.type;
+  if (node.tag) {
+    result.tag = node.tag;
   }
-
-  if (trim) {
-    // Trim whitespace from text nodes and remove empty text nodes
-    node.text = node.text.trim();
-    if (!node.text) {
-      delete node.text;
+  if (Object.keys(node.attributes).length) {
+    result.attributes = node.attributes;
+  }
+  if (node.text || !trim) {
+    if (trim && !!node.text.trim()) {
+      result.text = node.text.trim();
+    } else {
+      result.text = node.text;
     }
   }
 
-  // Remove empty attributes
-  if (!Object.keys(node.attributes).length) {
-    delete node.attributes;
+  const children = [];
+  for (let child of node.children.filter(
+    (c) => !trim || c.type !== XmlNodeType.TEXT || !!c.text.trim()
+  )) {
+    children.push(sanitizeNode(child, trim));
+  }
+  if (children.length) {
+    result.children = children;
   }
 
-  if (trim) {
-    // Remove empty text nodes
-    node.children = node.children.filter((c) => c.type !== XmlNodeType.TEXT || !!c.text.trim());
-  }
-
-  // Remove empty children
-  if (!node.children.length) {
-    delete node.children;
-  }
-
-  if (node.children) {
-    // Sanitize the children
-    for (let child of node.children) {
-      sanitizeNode(child, trim);
-    }
-  }
+  return result;
 }
-
-/*
-function sanitizeNodes(nodes: XmlNode[]) {
-  nodes.forEach((n) => {
-    delete n.parent;
-    if (n.type === XmlNodeType.ELEMENT) {
-      const en = n as XmlElementNode;
-      sanitizeNodes(en.children);
-    }
-  });
-}
-*/

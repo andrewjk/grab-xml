@@ -1,4 +1,4 @@
-import { XmlNode } from "../types/XmlNode";
+import XmlNode from "../src/XmlNode";
 
 export default function stringifyNode(node: XmlNode) {
   return JSON.stringify(node, replacer, 2);

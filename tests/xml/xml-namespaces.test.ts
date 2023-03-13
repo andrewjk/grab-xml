@@ -13,12 +13,11 @@ test("XML namespaces", () => {
 </x:xml>
 `;
 
-  const doc = grabXml(xml);
-  sanitizeNode(doc);
+  const xmlDoc = grabXml(xml);
+  const doc = sanitizeNode(xmlDoc);
 
   const expected = {
     type: XmlNodeType.ELEMENT,
-    tag: "#root",
     children: [
       {
         type: XmlNodeType.ELEMENT,

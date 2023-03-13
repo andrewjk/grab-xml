@@ -1,5 +1,5 @@
 import Options from "../types/Options";
-import XmlNode from "../types/XmlNode";
+import XmlNode from "./XmlNode";
 import XmlNodeType from "../types/XmlNodeType";
 
 enum ParseLocation {
@@ -66,14 +66,7 @@ const closeSquareCode = "]".charCodeAt(0);
  * @returns A root element node with the XML's elements as children
  */
 export default function grabXml(content: string, options: Options = {}): XmlNode {
-  const root: XmlNode = {
-    type: XmlNodeType.ELEMENT,
-    parent: null,
-    tag: "#root",
-    attributes: {},
-    children: [],
-    text: "",
-  };
+  const root = new XmlNode(XmlNodeType.ELEMENT, null);
 
   const state: ParseState = {
     location: ParseLocation.NONE,
@@ -96,14 +89,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
             break;
           }
           default: {
-            const child: XmlNode = {
-              type: XmlNodeType.TEXT,
-              parent: state.node,
-              tag: "",
-              attributes: {},
-              children: [],
-              text: "",
-            };
+            const child = new XmlNode(XmlNodeType.TEXT, state.node);
             state.node.children.push(child);
             updateState(state, ParseLocation.INSIDE_TEXT, i, child);
             textNeedsDecoding = false;
@@ -133,14 +119,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
               const endIndex = content.indexOf("-->", i);
               if (!options.ignoreComments) {
                 if (endIndex !== -1) {
-                  const child: XmlNode = {
-                    type: XmlNodeType.COMMENT,
-                    parent: state.node,
-                    tag: "",
-                    attributes: {},
-                    children: [],
-                    text: "",
-                  };
+                  const child = new XmlNode(XmlNodeType.COMMENT, state.node);
                   state.node.children.push(child);
                   updateState(state, ParseLocation.NONE, i + 3, child);
                   i = endIndex;
@@ -163,14 +142,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
               // It's CDATA
               const endIndex = content.indexOf("]]>", i);
               if (endIndex !== -1) {
-                const child: XmlNode = {
-                  type: XmlNodeType.TEXT,
-                  parent: state.node,
-                  tag: "",
-                  attributes: {},
-                  children: [],
-                  text: "",
-                };
+                const child = new XmlNode(XmlNodeType.TEXT, state.node);
                 state.node.children.push(child);
                 updateState(state, ParseLocation.NONE, i + 8, child);
                 i = endIndex;
@@ -188,14 +160,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
             }
           }
           default: {
-            const child: XmlNode = {
-              type: XmlNodeType.ELEMENT,
-              parent: state.node,
-              tag: "",
-              attributes: {},
-              children: [],
-              text: "",
-            };
+            const child = new XmlNode(XmlNodeType.ELEMENT, state.node);
             state.node.children.push(child);
             updateState(state, ParseLocation.ELEMENT_OPEN_NAME, i, child);
             break;
@@ -270,6 +235,16 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
           case closeTriangleCode: {
             // TODO: Check that the tagname matches
             updateState(state, ParseLocation.NONE, i, state.node.parent);
+            /*
+            // Pop the matching element off the stack
+            // If no matching element was found... just ignore it?
+            const tag = content.substring(state.start, i);
+            let openingNode = state.node;
+            while (openingNode && openingNode.tag !== tag) {
+              openingNode = openingNode.parent;
+            }
+            updateState(state, ParseLocation.NONE, i, openingNode ? openingNode.parent : undefined);
+            */
             break;
           }
         }
@@ -525,9 +500,9 @@ function finishIgnorableNode(content: string, i: number, state: ParseState, igno
   updateState(state, ParseLocation.NONE, i, state.node.parent);
 }
 
-function updateState(state: ParseState, location: ParseLocation, breakPos: number, node?: XmlNode) {
+function updateState(state: ParseState, location: ParseLocation, startPos: number, node?: XmlNode) {
   state.location = location;
-  state.start = breakPos;
+  state.start = startPos;
   if (node) {
     state.node = node;
   }
