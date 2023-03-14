@@ -189,6 +189,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
         // Check for a closing bracket to move onto the next thing
         switch (content.charCodeAt(i)) {
           case closeTriangleCode: {
+            state.node.selfClosing = true;
             updateState(state, ParseLocation.NONE, i, state.node.parent);
             break;
           }

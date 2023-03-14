@@ -13,6 +13,8 @@ export default class XmlNode {
   children: XmlNode[];
   /** The text content, if applicable for the node type */
   text: string;
+  /** Whether this node is self-closing */
+  selfClosing: boolean | undefined;
 
   constructor(type: XmlNodeType, parent: XmlNode) {
     this.type = type;
@@ -31,9 +33,33 @@ export default class XmlNode {
     }
   }
 
-  getHtml(): string {
+  getOuterXml(): string {
     if (this.type === XmlNodeType.ELEMENT) {
-      return `<${this.tag}>${this.children.map((c) => c.getHtml()).join("")}</${this.tag}>`;
+      let result = `<${this.tag}`;
+      for (let [name, value] of Object.entries(this.attributes)) {
+        result += ` ${name}`;
+        if (value) {
+          result += `="${value.replace('"', '\\"')}"`;
+        }
+      }
+      if (this.selfClosing) {
+        result += ` />`;
+      } else {
+        result += `>${this.getInnerXml()}</${this.tag}>`;
+      }
+      return result;
+    } else if (this.type === XmlNodeType.TEXT) {
+      return this.text;
+    }
+  }
+
+  getInnerXml(): string {
+    if (this.type === XmlNodeType.ELEMENT) {
+      if (this.selfClosing) {
+        return "";
+      } else {
+        return this.children.map((c) => c.getOuterXml()).join("");
+      }
     } else if (this.type === XmlNodeType.TEXT) {
       return this.text;
     }
