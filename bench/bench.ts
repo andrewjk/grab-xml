@@ -5,10 +5,9 @@ const suite = new Benchmark.Suite("XML parsing benchmarks");
 import grabXml from "../src/grabXml.js";
 import { XMLParser } from "fast-xml-parser";
 import * as txml from "txml";
-
-//import { DOMParser } from "xmldom";
-//import xml2js from "xml2js";
-//import { convert } from "xmlbuilder2";
+import { DOMParser } from "xmldom";
+import * as xml2js from "xml2js";
+import { convert } from "xmlbuilder2";
 
 import * as fs from "fs";
 
@@ -31,17 +30,17 @@ suite
   .add("txml", function () {
     txml.parse(xmlData, { noChildNodes: [] });
   })
-  //.add("xmldom", function () {
-  //  xdParser.parseFromString(xmlData);
-  //})
-  //.add("xmlbuilder2", function () {
-  //  convert(xmlData);
-  //})
-  //.add("xml2js ", function () {
-  //  xml2js.parseString(xmlData, function (err, result) {
-  //    if (err) throw err;
-  //  });
-  //})
+  .add("xmldom", function () {
+    xdParser.parseFromString(xmlData);
+  })
+  .add("xmlbuilder2", function () {
+    convert(xmlData);
+  })
+  .add("xml2js ", function () {
+    xml2js.parseString(xmlData, function (err: Error, result: any) {
+      if (err) throw err;
+    });
+  })
 
   // Add listeners
   .on("start", function () {
