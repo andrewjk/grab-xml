@@ -2,7 +2,7 @@ import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
 
-test("Node getOuterXml", () => {
+test("Node outerXml", () => {
   const xml = `
 <xml>
   <element>
@@ -18,10 +18,10 @@ test("Node getOuterXml", () => {
   const expected =
     "<element><p>I'm a paragraph.</p><p>I'm another paragraph.</p><img src=\"self-closing.jpg\" /></element>";
 
-  assert.equal(doc.children[0].children[0].getOuterXml(), expected);
+  assert.equal(doc.children[0].children[0].outerXml(), expected);
 });
 
-test("Node getInnerXml", () => {
+test("Node innerXml", () => {
   const xml = `
 <xml>
   <element>
@@ -37,7 +37,7 @@ test("Node getInnerXml", () => {
   const expected =
     "<p>I'm a paragraph.</p><p>I'm another paragraph.</p><img src=\"self-closing.jpg\" />";
 
-  assert.equal(doc.children[0].children[0].getInnerXml(), expected);
+  assert.equal(doc.children[0].children[0].innerXml(), expected);
 });
 
 test.run();

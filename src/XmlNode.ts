@@ -25,15 +25,17 @@ export default class XmlNode {
     this.text = "";
   }
 
-  getText(): string {
+  /** Returns a string containing the text content of the node and its children */
+  content(): string {
     if (this.type === XmlNodeType.ELEMENT) {
-      return this.children.map((c) => c.getText()).join("");
+      return this.children.map((c) => c.content()).join("");
     } else if (this.type === XmlNodeType.TEXT) {
       return this.text;
     }
   }
 
-  getOuterXml(): string {
+  /** Returns a string containing the XML of the node and its children, including the node itself */
+  outerXml(): string {
     if (this.type === XmlNodeType.ELEMENT) {
       let result = `<${this.tag}`;
       for (let [name, value] of Object.entries(this.attributes)) {
@@ -45,7 +47,7 @@ export default class XmlNode {
       if (this.selfClosing) {
         result += ` />`;
       } else {
-        result += `>${this.getInnerXml()}</${this.tag}>`;
+        result += `>${this.innerXml()}</${this.tag}>`;
       }
       return result;
     } else if (this.type === XmlNodeType.TEXT) {
@@ -53,19 +55,21 @@ export default class XmlNode {
     }
   }
 
-  getInnerXml(): string {
+  /** Returns a string containing the XML of the node's children */
+  innerXml(): string {
     if (this.type === XmlNodeType.ELEMENT) {
       if (this.selfClosing) {
         return "";
       } else {
-        return this.children.map((c) => c.getOuterXml()).join("");
+        return this.children.map((c) => c.outerXml()).join("");
       }
     } else if (this.type === XmlNodeType.TEXT) {
       return this.text;
     }
   }
 
-  getJson(): string {
+  /** Returns a string containing a JSON representation of the node and its children, excluding the circular parent references */
+  json(): string {
     function replacer(key: string, value: any) {
       if (key == "parent") return undefined;
       else return value;

@@ -2,7 +2,7 @@ import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
 
-test("Node getJson", () => {
+test("Node json", () => {
   const xml = `
 <xml>
   <element>
@@ -53,7 +53,7 @@ test("Node getJson", () => {
   "text": ""
 }`;
 
-  assert.equal(doc.children[0].children[0].getJson(), expected);
+  assert.equal(doc.children[0].children[0].json(), expected);
 });
 
 test.run();

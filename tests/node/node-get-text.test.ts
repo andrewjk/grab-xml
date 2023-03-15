@@ -2,7 +2,7 @@ import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
 
-test("Node getText", () => {
+test("Node content", () => {
   const xml = `
 <xml>
   <element>
@@ -16,7 +16,7 @@ test("Node getText", () => {
 
   const expected = "I'm a paragraph.I'm another paragraph.";
 
-  assert.equal(doc.children[0].children[0].getText().trim(), expected);
+  assert.equal(doc.children[0].children[0].content().trim(), expected);
 });
 
 test.run();
