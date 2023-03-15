@@ -61,9 +61,9 @@ const openSquareCode = "[".charCodeAt(0);
 const closeSquareCode = "]".charCodeAt(0);
 
 /**
- * Parses XML into a root element node with the XML's elements as children.
- * @param content The XML content to parse
- * @returns A root element node with the XML's elements as children
+ * Parses XML into a root node with all of the XML's nodes as children.
+ * @param content The XML content to parse.
+ * @returns A root node with all of the XML's nodes as children.
  */
 export default function grabXml(content: string, options: Options = {}): XmlNode {
   const root = new XmlNode(XmlNodeType.ELEMENT, null);
