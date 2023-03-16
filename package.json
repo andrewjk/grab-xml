@@ -6,11 +6,15 @@
   "main": "dist/index.js",
   "browser": "dist/index.mjs",
   "module": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
     "test": "uvu -r tsm tests",
-    "check": "tsc -p tsconfig-check.json --noEmit"
+    "check": "tsc -p tsconfig-check.json --noEmit",
+    "release": "tsup && np"
   },
   "keywords": [
     "xml",
@@ -20,7 +24,8 @@
   "author": "andrewjk",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^18.14.2",
+    "@types/node": "^18.15.3",
+    "np": "^7.6.3",
     "tsm": "^2.3.0",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5",
