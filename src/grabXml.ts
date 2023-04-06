@@ -91,8 +91,8 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
           default: {
             const child = new XmlNode(XmlNodeType.TEXT, state.node);
             state.node.children.push(child);
-            updateState(state, ParseLocation.INSIDE_TEXT, i, child);
             textNeedsDecoding = false;
+            updateState(state, ParseLocation.INSIDE_TEXT, i, child);
             break;
           }
         }
@@ -123,7 +123,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
                   state.node.children.push(child);
                   updateState(state, ParseLocation.NONE, i + 3, child);
                   i = endIndex;
-                  setTextContent(content, i, state, false, options.trimWhitespace);
+                  setContentText(content, i, state, false, options.trimWhitespace);
                   updateState(state, ParseLocation.NONE, i, state.node.parent);
                   i += 2;
                 } else {
@@ -146,7 +146,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
                 state.node.children.push(child);
                 updateState(state, ParseLocation.NONE, i + 8, child);
                 i = endIndex;
-                setTextContent(content, i, state, false, options.trimWhitespace);
+                setContentText(content, i, state, false, options.trimWhitespace);
                 updateState(state, ParseLocation.NONE, i, state.node.parent);
                 i += 2;
               } else {
@@ -333,6 +333,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
           case singleQuoteCode:
           case doubleQuoteCode: {
             quote = content[i];
+            textNeedsDecoding = false;
             updateState(state, ParseLocation.ATTRIBUTE_VALUE, i + 1);
             break;
           }
@@ -345,6 +346,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
           }
           default: {
             quote = "";
+            textNeedsDecoding = false;
             updateState(state, ParseLocation.ATTRIBUTE_VALUE, i);
             break;
           }
@@ -352,12 +354,18 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
         break;
       }
       case ParseLocation.ATTRIBUTE_VALUE: {
-        // Check for quotes or spaces to end the attribute's value
+        // Check for quotes or spaces to end the attribute's value, or an ampersand to indicate
+        // that the text may need to be decoded
         switch (content.charCodeAt(i)) {
           case singleQuoteCode:
           case doubleQuoteCode: {
             if (quote === content[i]) {
-              state.node.attributes[attribute] = content.substring(state.start, i);
+              state.node.attributes[attribute] = getAttributeText(
+                content,
+                i,
+                state,
+                textNeedsDecoding
+              );
               updateState(state, ParseLocation.INSIDE_ELEMENT, i);
             }
             break;
@@ -367,9 +375,18 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
           case carriageReturnCode:
           case newLineCode: {
             if (!quote) {
-              state.node.attributes[attribute] = content.substring(state.start, i);
+              state.node.attributes[attribute] = getAttributeText(
+                content,
+                i,
+                state,
+                textNeedsDecoding
+              );
               updateState(state, ParseLocation.INSIDE_ELEMENT, i);
             }
+            break;
+          }
+          case ampersandCode: {
+            textNeedsDecoding = true;
             break;
           }
         }
@@ -380,7 +397,7 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
         // that the text may need to be decoded
         switch (content.charCodeAt(i)) {
           case openTriangleCode: {
-            setTextContent(content, i, state, textNeedsDecoding, options.trimWhitespace);
+            setContentText(content, i, state, textNeedsDecoding, options.trimWhitespace);
             updateState(state, ParseLocation.ELEMENT_OPENED, i, state.node.parent);
             break;
           }
@@ -430,34 +447,71 @@ export default function grabXml(content: string, options: Options = {}): XmlNode
   // Finish off any text that was located at the end
   // I think it's safe to ignore other types of nodes as they would be unclosed and in error here
   if (state.location === ParseLocation.INSIDE_TEXT) {
-    setTextContent(content, content.length, state, textNeedsDecoding, options.trimWhitespace);
+    setContentText(content, content.length, state, textNeedsDecoding, options.trimWhitespace);
   }
 
   return root;
 }
 
-function setTextContent(
+function getAttributeText(
+  content: string,
+  i: number,
+  state: ParseState,
+  textNeedsDecoding: boolean
+) {
+  let text = content.substring(state.start, i);
+
+  // Maybe decode the text
+  if (textNeedsDecoding) {
+    text = decodeEntities(text);
+  }
+
+  return text;
+}
+
+function setContentText(
   content: string,
   i: number,
   state: ParseState,
   textNeedsDecoding: boolean,
   trimWhitespace?: boolean
 ) {
+  // Get the content text from the start to the current position
   state.node.text = content.substring(state.start, i);
+
+  // Maybe decode the text
   if (textNeedsDecoding) {
-    state.node.text = state.node.text
-      .replaceAll("&lt;", "<")
-      .replaceAll("&gt;", ">")
-      .replaceAll("&amp;", "&")
-      .replaceAll("&apos;", "'")
-      .replaceAll("&quot;", '"');
+    state.node.text = decodeEntities(state.node.text);
   }
+
+  // Maybe trim whitespace from around the text
   if (trimWhitespace) {
     state.node.text = state.node.text.trim();
+    // If there's no longer any text, remove this node from its parent
     if (!state.node.text) {
       state.node.parent.children.pop();
     }
   }
+}
+
+function decodeEntities(text: string) {
+  return (
+    text
+      // Predefined entities that all XML parsers must handle
+      .replaceAll("&lt;", "<")
+      .replaceAll("&gt;", ">")
+      .replaceAll("&amp;", "&")
+      .replaceAll("&apos;", "'")
+      .replaceAll("&quot;", '"')
+      // Unicode character references in the form of &#nnnn; or &#xhhhh;
+      // Adapted from https://stackoverflow.com/a/29824550
+      .replace(/&#(\d+|x[a-f0-9]+);/gi, (_, code) => {
+        if (code.startsWith("x")) {
+          code = parseInt(code.substring(1), 16);
+        }
+        return String.fromCharCode(code);
+      })
+  );
 }
 
 function startElementNode(content: string, i: number, state: ParseState, options: Options) {
