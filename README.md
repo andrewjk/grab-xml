@@ -16,7 +16,7 @@ grab-xml contains CommonJS and ESM modules for use in Node, in the browser and a
 
 ### grabXml
 
-Parses XML into a root node with all of the XML's nodes as children.
+Parses XML into a root XmlNode object with all of the XML's nodes as children.
 
 ```ts
 import { grabXml } from 'grab-xml';
@@ -26,7 +26,7 @@ const doc = grabXml(xml);
 
 ### XmlNode
 
-Each XmlNode has the following properties and functions:
+Each XmlNode object has the following properties and functions:
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -47,7 +47,7 @@ Each XmlNode has the following properties and functions:
 
 ### Options
 
-You can pass an options object into grabXml with the following optional properties:
+You can pass an options object into the grabXml function with the following optional properties:
 
 | Property | Type | Description |
 | --- | --- | --- |
@@ -59,7 +59,7 @@ You can pass an options object into grabXml with the following optional properti
 
 ### grabHtml
 
-Parses HTML into a root node with all of the HTML's nodes as children. Basically, it calls `grabXml` with the `voidElements` and `literalElements` options set to values that work for HTML.
+Parses HTML into a root XmlNode object with all of the HTML's nodes as children. Basically, it calls `grabXml` with the `voidElements` and `literalElements` options set to values that work for HTML.
 
 ```ts
 import { grabHtml } from 'grab-xml';
