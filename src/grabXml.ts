@@ -1,5 +1,5 @@
 import Options from "../types/Options";
-import XmlNode from "./XmlNode";
+import XmlNode from "../types/XmlNode";
 import XmlNodeType from "../types/XmlNodeType";
 
 enum ParseLocation {

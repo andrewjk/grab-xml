@@ -1,4 +1,4 @@
-import XmlNode from "../src/XmlNode";
+import XmlNode from "../types/XmlNode";
 import XmlNodeType from "../types/XmlNodeType";
 
 export default function sanitizeNode(node: XmlNode, trim = true) {

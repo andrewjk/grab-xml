@@ -1,4 +1,4 @@
-import XmlNode from "./XmlNode";
+import XmlNode from "../types/XmlNode";
 import grabXml from "./grabXml";
 
 /**
