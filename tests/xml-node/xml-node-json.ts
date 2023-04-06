@@ -1,9 +1,10 @@
-import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
 
-test("Node json", () => {
-  const xml = `
+export default {
+  name: "Node json",
+  test: () => {
+    const xml = `
 <xml>
   <element>
     <p>I'm a paragraph.</p>
@@ -12,9 +13,9 @@ test("Node json", () => {
 </xml>
 `;
 
-  const doc = grabXml(xml, { trimWhitespace: true });
+    const doc = grabXml(xml, { trimWhitespace: true });
 
-  const expected = `{
+    const expected = `{
   "type": 0,
   "tag": "element",
   "attributes": {},
@@ -53,7 +54,6 @@ test("Node json", () => {
   "text": ""
 }`;
 
-  assert.equal(doc.children[0].children[0].json(), expected);
-});
-
-test.run();
+    assert.equal(doc.children[0].children[0].json(), expected);
+  },
+};

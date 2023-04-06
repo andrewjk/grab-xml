@@ -1,11 +1,10 @@
 /*
-import { test } from "uvu";
 import * as assert from "uvu/assert";
 import grabHtml from "../../src/grabHtml";
 import XmlNodeType from "../../types/XmlNodeType";
 import sanitizeNode from "../sanitizeNode";
 
-test("HTML omitted end tags", () => {
+export default { name: "HTML omitted end tags", test: () => {
   const html = `
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +81,5 @@ test("HTML omitted end tags", () => {
   };
 
   assert.equal(doc, expected);
-});
-
-test.run();
+}};
 */

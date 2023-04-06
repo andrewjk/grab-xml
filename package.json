@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "test": "uvu -r tsm tests",
+    "test": "uvu -r tsm",
     "check": "tsc -p tsconfig-check.json --noEmit",
     "release": "tsup && np"
   },
