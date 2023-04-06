@@ -4,9 +4,13 @@ import xmlNodeJson from "./xml-node-json";
 import xmlNodeOuterXml from "./xml-node-outer-xml";
 import xmlNodeText from "./xml-node-text";
 
-test(xmlNodeInnerXml.name, xmlNodeInnerXml.test);
-test(xmlNodeJson.name, xmlNodeJson.test);
-test(xmlNodeOuterXml.name, xmlNodeOuterXml.test);
-test(xmlNodeText.name, xmlNodeText.test);
+addTest(xmlNodeInnerXml);
+addTest(xmlNodeJson);
+addTest(xmlNodeOuterXml);
+addTest(xmlNodeText);
+
+function addTest(x: any) {
+  test(x.name, x.test);
+}
 
 test.run();

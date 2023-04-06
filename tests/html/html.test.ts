@@ -1,6 +1,10 @@
 import { test } from "uvu";
 import htmlDocument from "./html-document";
 
-test(htmlDocument.name, htmlDocument.test);
+addTest(htmlDocument);
+
+function addTest(x: any) {
+  test(x.name, x.test);
+}
 
 test.run();

@@ -2,7 +2,7 @@ import * as assert from "uvu/assert";
 import grabXml from "../../src/grabXml";
 
 export default {
-  name: "Node content",
+  name: "XmlNode content",
   test: () => {
     const xml = `
 <xml>

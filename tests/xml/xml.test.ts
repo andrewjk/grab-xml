@@ -20,25 +20,29 @@ import xmlSpaces from "./xml-spaces";
 import xmlTrimWhitespace from "./xml-trim-whitespace";
 import xmlVoidElements from "./xml-void-elements";
 
-test(xmlAttributesBare.name, xmlAttributesBare.test);
-test(xmlAttributesDouble.name, xmlAttributesDouble.test);
-test(xmlAttributesSingle.name, xmlAttributesSingle.test);
-test(xmlAttributesWithoutValue.name, xmlAttributesWithoutValue.test);
-test(xmlCdata.name, xmlCdata.test);
-test(xmlComments.name, xmlComments.test);
-test(xmlDecode.name, xmlDecode.test);
-test(xmlDoctype.name, xmlDoctype.test);
-test(xmlElementsSelfClosing.name, xmlElementsSelfClosing.test);
-test(xmlElements.name, xmlElements.test);
-test(xmlEntities.name, xmlEntities.test);
-test(xmlIgnoreComments.name, xmlIgnoreComments.test);
-test(xmlIgnoreInstructions.name, xmlIgnoreInstructions.test);
-test(xmlInstruction.name, xmlInstruction.test);
-test(xmlLiteralElements.name, xmlLiteralElements.test);
-test(xmlMinimum.name, xmlMinimum.test);
-test(xmlNamespaces.name, xmlNamespaces.test);
-test(xmlSpaces.name, xmlSpaces.test);
-test(xmlTrimWhitespace.name, xmlTrimWhitespace.test);
-test(xmlVoidElements.name, xmlVoidElements.test);
+addTest(xmlAttributesBare);
+addTest(xmlAttributesDouble);
+addTest(xmlAttributesSingle);
+addTest(xmlAttributesWithoutValue);
+addTest(xmlCdata);
+addTest(xmlComments);
+addTest(xmlDecode);
+addTest(xmlDoctype);
+addTest(xmlElementsSelfClosing);
+addTest(xmlElements);
+addTest(xmlEntities);
+addTest(xmlIgnoreComments);
+addTest(xmlIgnoreInstructions);
+addTest(xmlInstruction);
+addTest(xmlLiteralElements);
+addTest(xmlMinimum);
+addTest(xmlNamespaces);
+addTest(xmlSpaces);
+addTest(xmlTrimWhitespace);
+addTest(xmlVoidElements);
+
+function addTest(x: any) {
+  test(x.name, x.test);
+}
 
 test.run();
